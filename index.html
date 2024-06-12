@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -27,12 +28,36 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/light-mode.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        .content-box {
+            display: none;
+        }
+
+        .pdf-modal {
+            max-width: 70%;
+            margin: auto;
+        }
+        .pdf-modal iframe {
+            width: 100%;
+            height: 88vh; /* Increase the height of the iframe */
+            border: none; /* Remove the default border */
+        }
+          /* Hide default scrollbar */
+          .pdf-modal iframe::-webkit-scrollbar {
+            display: none;
+        }
+        .pdf-modal iframe {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+       
+    </style>
 </head>
 
 <body>
 
     <!-- Preloader Area Start -->
-    <!-- <div class="preloader">
+    <div class="preloader">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
             <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
         </svg>
@@ -48,7 +73,7 @@
                 <span>g</span>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- Preloader Area End -->
 
 
@@ -68,7 +93,7 @@
 
                     <div class="logo-box">
                         <a href="index.html">
-                            <img src="assets/img/logo/Logo 1.png" alt="">
+                            <img src="assets/img/logo/Logo 1.png" alt="" loading="lazy">
                         </a>
                     </div>
 
@@ -114,7 +139,7 @@
 
                     <div class="logo-box">
                         <a href="index.html">
-                            <img src="assets/img/logo/logo 1.png" alt="">
+                            <img src="assets/img/logo/logo 1.png" alt="" loading="lazy">
                         </a>
                     </div>
 
@@ -173,26 +198,23 @@
                             <h1 class="hero-title">Graphic Designer+<br>UI/UX Designer
                             </h1>
 
-                                <div class="hero-image-box d-md-none text-center">
-                                    <img src="assets/img/hero/me.png" alt="" style="width: 50%; height: auto;">
-                                </div>
+                            <div class="hero-image-box d-md-none text-center">
+                                <img src="assets/img/hero/me.png" alt="" style="width: 50%; height: auto;" loading="lazy">
+                            </div>
 
-                            <p class="lead">I turn complex design challenges into elegant, integrity-driven visuals that captivate and engage billions of people.</p>
+                            <p class="lead">I turn complex design challenges into elegant, integrity-driven visuals that
+                                captivate and engage billions of people.</p>
                             <div class="button-box d-flex flex-wrap align-items-center">
-                                <a href="https://drive.google.com/file/d/1gabUZdDbPMl1miMqhshK8FCp4831y1js/view?usp=sharing" class="btn tj-btn-secondary">Download
+                                <a href="https://drive.google.com/file/d/1H5nrH9PkRT7rmsEY8JgVuJ8zyxfww4xu/view?usp=sharing"
+                                    class="btn tj-btn-secondary">Download
                                     CV <i class="flaticon-download"></i></a>
-                                <!-- <ul class="ul-reset social-icons">
-                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa-light fa-basketball"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                                </ul> -->
+
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 d-none d-md-block">
                         <div class="hero-image-box text-center">
-                            <img src="assets/img/hero/me.png" alt="" style="width: 67%; height: auto;">
+                            <img src="assets/img/hero/me.png" alt="" style="width: 67%; height: auto;" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -220,7 +242,7 @@
                         <div class="col-6 col-lg-3">
                             <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
                                 <div class="number"><span class="odometer" data-count="5">0</span>+</div>
-                                <div class="text">Design Awards  <br>Won</div>
+                                <div class="text">Design Awards <br>Won</div>
                             </div>
                         </div>
                     </div>
@@ -236,7 +258,8 @@
                     <div class="col-md-12">
                         <div class="section-header text-center">
                             <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">My Quality Services</h2>
-                            <p class=" wow fadeInUp" data-wow-delay=".4s">We bring your ideas to life with stunning graphic designs that captivate and inspire you and your customers.</p>
+                            <p class=" wow fadeInUp" data-wow-delay=".4s">We bring your ideas to life with stunning
+                                graphic designs that captivate and inspire you and your customers.</p>
                         </div>
                     </div>
                 </div>
@@ -251,10 +274,11 @@
                                     <h3 class="service-title">Branding Design</h3>
                                 </div>
                                 <div class="right-box">
-                                    <p>Creating strong and memorable brand identities that connect with your audience and leave a lasting impression.</p>
+                                    <p>Creating strong and memorable brand identities that connect with your audience
+                                        and leave a lasting impression.</p>
                                 </div>
                                 <i class="flaticon-up-right-arrow"></i>
-                                <button data-mfp-src="#service-wrapper" class="service-link modal-popup"></button>
+                                <button data-pdf-url="assets/Brandings.pdf" class="service-link modal-popup"></button>
                             </div>
                             <div class="service-item d-flex flex-wrap align-items-center wow fadeInUp"
                                 data-wow-delay=".6s">
@@ -263,10 +287,11 @@
                                     <h3 class="service-title">Social Media Design </h3>
                                 </div>
                                 <div class="right-box">
-                                    <p>Designing eye-catching social media content that grabs attention and encourages engagement from your followers.</p>
+                                    <p>Designing eye-catching social media content that grabs attention and encourages
+                                        engagement from your followers.</p>
                                 </div>
                                 <i class="flaticon-up-right-arrow"></i>
-                                <button data-mfp-src="#service-wrapper" class="service-link modal-popup"></button>
+                                <button data-pdf-url="assets/Social Media Design.pdf" class="service-link modal-popup"></button>
                             </div>
                             <div class="service-item d-flex flex-wrap align-items-center wow fadeInUp"
                                 data-wow-delay=".7s">
@@ -275,13 +300,13 @@
                                     <h3 class="service-title">Logo Design </h3>
                                 </div>
                                 <div class="right-box">
-                                    <p>Making unique and memorable logos that represent your brand and make it stand out.</p>
+                                    <p>Making unique and memorable logos that represent your brand and make it stand
+                                        out.</p>
                                 </div>
                                 <i class="flaticon-up-right-arrow"></i>
-                                <button data-mfp-src="#service-wrapper" class="service-link modal-popup"></button>
+                                <button data-pdf-url="assets/Logo Design.pdf" class="service-link modal-popup"></button>
                             </div>
-                            <div class="service-item d-flex flex-wrap align-items-center wow fadeInUp"
-                                data-wow-delay=".8s">
+                            <div class="service-item d-flex flex-wrap align-items-center wow fadeInUp" data-wow-delay=".8s">
                                 <div class="left-box d-flex flex-wrap align-items-center">
                                     <span class="number">04</span>
                                     <h3 class="service-title">UI/UX Design</h3>
@@ -290,7 +315,7 @@
                                     <p>Creating user-friendly and visually appealing interfaces that enhance user interaction and satisfaction.</p>
                                 </div>
                                 <i class="flaticon-up-right-arrow"></i>
-                                <button data-mfp-src="#service-wrapper" class="service-link modal-popup"></button>
+                                <button data-pdf-url="assets/UIUXDesign.pdf" class="service-link modal-popup"></button>
                             </div>
                             <div class="active-bg wow fadeInUp" data-wow-delay=".5s"></div>
                         </div>
@@ -299,126 +324,9 @@
             </div>
         </section>
         <!-- SERVICES SECTION END -->
-
         <!-- start: Service Popup -->
-        <div id="service-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
-            <div class="popup_modal_img">
-                <img src="assets/img/services/modal-img.jpg" alt="">
-            </div>
-
-            <div class="popup_modal_content">
-                <div class="service_details">
-                    <div class="row">
-                        <div class="col-lg-7 col-xl-8">
-                            <div class="service_details_content">
-                                <div class="service_info">
-                                    <h6 class="subtitle">SERVICES</h6>
-                                    <h2 class="title">UI/UX Design</h2>
-                                    <div class="desc">
-                                        <p>Elizabeth some dodgy chavs are you taking the piss faff about pardon amongst
-                                            car
-                                            boot a load of old tosh is cracking goal blow off telling brown.</p>
-
-                                        <p>Brolly show off show off pick your nose and blow off well A bit of how’s your
-                                            father tomfoolery blimey, me old mucker starkers Queen’s English dropped a
-                                            clanger bite your arm spiffing good time burke Why chancer. Hotpot bum bag
-                                            cracking goal young delinquent naff bugger cup of chars bender loo it’s all
-                                            gone
-                                            to pot the nancy cheeky.</p>
-
-                                        <p>At public school cras bog some dodgy chav Richard Why argy bargy vagabon
-                                            William
-                                            bender matie boy, off his nut chancer Jeffrey up the kyver say mufty you mug
-                                            ummm telling pear shaped Oxford owt to do with me do one so said are you
-                                            taking
-                                            his.</p>
-                                    </div>
-
-                                    <h3 class="title">Services Process</h3>
-                                    <div class="desc">
-                                        <p>Elizabeth some dodgy chavs are you taking the piss faff about pardon amongst
-                                            car
-                                            boot a load of old tosh is cracking goal blow off telling brown.</p>
-                                    </div>
-                                    <ul>
-                                        <li>Reinvent Your Business to Better</li>
-                                        <li>Pioneering the Internet's First</li>
-                                        <li>Pioneering the Design World's First</li>
-                                        <li>Pioneering the Design World's First</li>
-                                        <li>Pioneering the Design World's First</li>
-                                        <li>Pioneering the Design World's First</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-xl-4">
-                            <div class="tj_main_sidebar">
-                                <div class="sidebar_widget services_list">
-                                    <div class="widget_title">
-                                        <h3 class="title">All Services</h3>
-                                    </div>
-                                    <ul>
-                                        <li class="active">
-                                            <button>
-                                                <i class="flaticon-design"></i>
-                                                Branding Design
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button>
-                                                <i class="flaticon-3d-movie"></i>
-                                                3D Animation
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button>
-                                                <i class="flaticon-ux-design"></i>
-                                                UI/UX Design
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button>
-                                                <i class="flaticon-web-design"></i>
-                                                Web Design
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button>
-                                                <i class="flaticon-ui-design"></i>
-                                                App Design
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="sidebar_widget contact_form">
-                                    <div class="widget_title">
-                                        <h3 class="title">Get in Touch</h3>
-                                    </div>
-
-                                    <form action="https://themejunction.net/html/gerold/demo/index.html">
-                                        <div class="form_group">
-                                            <input type="text" name="name" id="name" placeholder="Name"
-                                                autocomplete="off">
-                                        </div>
-                                        <div class="form_group">
-                                            <input type="email" name="semail" id="semail" placeholder="Email"
-                                                autocomplete="off">
-                                        </div>
-                                        <div class="form_group">
-                                            <textarea name="smessage" id="smessage" placeholder="Your message"
-                                                autocomplete="off"></textarea>
-                                        </div>
-                                        <div class="form_btn">
-                                            <button class="btn tj-btn-primary" type="submit">Send Message</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="pdf-modal" class="popup_content_area zoom-anim-dialog mfp-hide pdf-modal">
+            <iframe src=""></iframe>
         </div>
         <!-- end: Service Popup -->
 
@@ -429,7 +337,8 @@
                     <div class="col-md-12">
                         <div class="section-header text-center">
                             <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">My Recent Works</h2>
-                            <p class=" wow fadeInUp" data-wow-delay=".4s">We transform your ideas into stunning designs that delight you and your customers.</p>
+                            <p class=" wow fadeInUp" data-wow-delay=".4s">We transform your ideas into stunning designs
+                                that delight you and your customers.</p>
                         </div>
                     </div>
                 </div>
@@ -439,12 +348,12 @@
                         <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
                             <div class="button-group filter-button-group">
                                 <button data-filter="*" class="active">All</button>
-                                <button data-filter=".uxui">Branding</button>
-                                <button data-filter=".branding">SocialMedia</button>
-                                <button data-filter=".mobile-app">Logo Designs</button>
+                                <button data-filter=".branding">Branding</button>
+                                <button data-filter=".social-media">SocialMedia</button>
+                                <button data-filter=".logox">Logo Designs</button>
                                 <button data-filter=".mobile-app">Digital Art</button>
-                                <button data-filter=".mobile-app">UI/UX</button>
-                                
+                                <button data-filter=".uxui">UI/UX</button>
+
                                 <div class="active-bg"></div>
                             </div>
                         </div>
@@ -454,7 +363,7 @@
                             <div class="gutter-sizer"></div>
                             <div class="portfolio-item branding">
                                 <div class="image-box">
-                                    <img src="assets/img/portfolio/2.jpg" alt="">
+                                    <img src="assets/brand.png" alt="" loading="lazy">
                                 </div>
                                 <div class="content-box">
                                     <h3 class="portfolio-title">Deloitte</h3>
@@ -464,9 +373,11 @@
                                         class="portfolio-link modal-popup"></button>
                                 </div>
                             </div>
-                            <div class="portfolio-item uxui">
+
+
+                            <div class="portfolio-item social-media">
                                 <div class="image-box">
-                                    <img src="assets/img/portfolio/1.jpg" alt="">
+                                    <img src="assets/Social Media/1.webp" alt="" loading="lazy">
                                 </div>
                                 <div class="content-box">
                                     <h3 class="portfolio-title">New Age</h3>
@@ -476,25 +387,332 @@
                                         class="portfolio-link modal-popup"></button>
                                 </div>
                             </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/2.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/3.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/4.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/5.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/6.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/7.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/8.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/9.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/10.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/11.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/12.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/13.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/14.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/15.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/16.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/17.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item social-media">
+                                <div class="image-box">
+                                    <img src="assets/Social Media/18.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <!-- finish socia media images -->
+
+                            <!-- logox -->
+                            <div class="portfolio-item logox">
+                                <div class="image-box">
+                                    <img src="assets/Logos/1.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item logox">
+                                <div class="image-box">
+                                    <img src="assets/Logos/2.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item logox">
+                                <div class="image-box">
+                                    <img src="assets/Logos/3.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item logox">
+                                <div class="image-box">
+                                    <img src="assets/Logos/4.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item logox">
+                                <div class="image-box">
+                                    <img src="assets/Logos/5.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item logox">
+                                <div class="image-box">
+                                    <img src="assets/Logos/6.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item logox">
+                                <div class="image-box">
+                                    <img src="assets/Logos/7.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item logox">
+                                <div class="image-box">
+                                    <img src="assets/Logos/8.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">New Age</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+
+                            <!--finish logox  -->
+                            <!-- uiux -->
+
                             <div class="portfolio-item uxui">
                                 <div class="image-box">
-                                    <img src="assets/img/portfolio/3.jpg" alt="">
+                                    <img src="assets/Ui-Ux/sneaker.webp" alt="" loading="lazy">
                                 </div>
-                                
                                 <div class="content-box">
-                                    <h3 class="portfolio-title">Sebastian</h3>
+                                    <h3 class="portfolio-title">New Age</h3>
                                     <p>Project was about precision and information.</p>
                                     <i class="flaticon-up-right-arrow"></i>
                                     <button data-mfp-src="#portfolio-wrapper"
                                         class="portfolio-link modal-popup"></button>
                                 </div>
                             </div>
-                            
+                            <!-- finish uiux -->
+                            <!-- digitalart -->
                             <div class="portfolio-item mobile-app">
                                 <div class="image-box">
-                                    <img src="assets/img/portfolio/3.jpg" alt="">
+                                    <img src="assets/Digital Art/1 (1).webp" alt="" loading="lazy">
                                 </div>
-                                
+
                                 <div class="content-box">
                                     <h3 class="portfolio-title">Sebastian</h3>
                                     <p>Project was about precision and information.</p>
@@ -503,18 +721,138 @@
                                         class="portfolio-link modal-popup"></button>
                                 </div>
                             </div>
-                            <div class="portfolio-item branding">
+                            <div class="portfolio-item mobile-app">
                                 <div class="image-box">
-                                    <img src="assets/img/portfolio/4.jpg" alt="">
+                                    <img src="assets/Digital Art/2.webp" alt="" loading="lazy">
                                 </div>
+
                                 <div class="content-box">
-                                    <h3 class="portfolio-title">Mochnix</h3>
+                                    <h3 class="portfolio-title">Sebastian</h3>
                                     <p>Project was about precision and information.</p>
                                     <i class="flaticon-up-right-arrow"></i>
                                     <button data-mfp-src="#portfolio-wrapper"
                                         class="portfolio-link modal-popup"></button>
                                 </div>
                             </div>
+                            <div class="portfolio-item mobile-app">
+                                <div class="image-box">
+                                    <img src="assets/Digital Art/3.webp" alt="" loading="lazy">
+                                </div>
+
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">Sebastian</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item mobile-app">
+                                <div class="image-box">
+                                    <img src="assets/Digital Art/4.webp" alt="" loading="lazy">
+                                </div>
+
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">Sebastian</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item mobile-app">
+                                <div class="image-box">
+                                    <img src="assets/Digital Art/5.webp" alt="" loading="lazy">
+                                </div>
+
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">Sebastian</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item mobile-app">
+                                <div class="image-box">
+                                    <img src="assets/Digital Art/6.webp" alt="" loading="lazy">
+                                </div>
+
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">Sebastian</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item mobile-app">
+                                <div class="image-box">
+                                    <img src="assets/Digital Art/7.webp" alt="" loading="lazy">
+                                </div>
+
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">Sebastian</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item mobile-app">
+                                <div class="image-box">
+                                    <img src="assets/Digital Art/8.webp" alt="" loading="lazy">
+                                </div>
+
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">Sebastian</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item mobile-app">
+                                <div class="image-box">
+                                    <img src="assets/Digital Art/9.webp" alt="" loading="lazy">
+                                </div>
+
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">Sebastian</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item mobile-app">
+                                <div class="image-box">
+                                    <img src="assets/Digital Art/10.webp" alt="" loading="lazy">
+                                </div>
+
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">Sebastian</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <div class="portfolio-item mobile-app">
+                                <div class="image-box">
+                                    <img src="assets/Digital Art/11.webp" alt="" loading="lazy">
+                                </div>
+
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">Sebastian</h3>
+                                    <p>Project was about precision and information.</p>
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+
+                            <!-- finish digital art -->
                         </div>
                     </div>
                 </div>
@@ -525,7 +863,7 @@
         <!-- start: Portfolio Popup -->
         <div id="portfolio-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
             <div class="popup_modal_img">
-                <img src="assets/img/portfolio/modal-img.jpg" alt="">
+                <img src="assets/img/portfolio/modal-img.jpg" alt="" loading="lazy">
             </div>
 
             <div class="popup_modal_content">
@@ -561,16 +899,16 @@
 
                 <div class="portfolio_gallery owl-carousel">
                     <div class="gallery_item">
-                        <img src="assets/img/portfolio-gallery/p-gallery-1.jpg" alt="">
+                        <img src="assets/img/portfolio-gallery/p-gallery-1.jpg" alt=""  loading="lazy">
                     </div>
                     <div class="gallery_item">
-                        <img src="assets/img/portfolio-gallery/p-gallery-2.jpg" alt="">
+                        <img src="assets/img/portfolio-gallery/p-gallery-2.jpg" alt="" loading="lazy">
                     </div>
                     <div class="gallery_item">
-                        <img src="assets/img/portfolio-gallery/p-gallery-3.jpg" alt="">
+                        <img src="assets/img/portfolio-gallery/p-gallery-3.jpg" alt="" loading="lazy">
                     </div>
                     <div class="gallery_item">
-                        <img src="assets/img/portfolio-gallery/p-gallery-4.jpg" alt="">
+                        <img src="assets/img/portfolio-gallery/p-gallery-4.jpg" alt="" loading="lazy">
                     </div>
                 </div>
 
@@ -718,7 +1056,7 @@
                                 </div>
                                 <h3 class="resume-title">Bachelor’s Degree</h3>
                                 <div class="institute">
-                                    Chandigarh University                                </div>
+                                    Chandigarh University </div>
                             </div>
                             <div class="resume-item wow fadeInRight" data-wow-delay=".6s">
                                 <div class="time">
@@ -775,7 +1113,7 @@
                             <div class="skill-item wow fadeInUp" data-wow-delay=".3s">
                                 <div class="skill-inner">
                                     <div class="icon-box">
-                                        <img src="assets/img/icons/figma.svg" alt="">
+                                        <img src="assets/img/icons/figma.svg" alt="" loading="lazy">
                                     </div>
                                     <div class="number">99%</div>
                                 </div>
@@ -784,7 +1122,7 @@
                             <div class="skill-item wow fadeInUp" data-wow-delay=".4s">
                                 <div class="skill-inner">
                                     <div class="icon-box">
-                                        <img src="assets/img/icons/sketch.svg" alt="">
+                                        <img src="assets/img/icons/sketch.svg" alt="" loading="lazy">
                                     </div>
                                     <div class="number">92%</div>
                                 </div>
@@ -793,7 +1131,7 @@
                             <div class="skill-item wow fadeInUp" data-wow-delay=".5s">
                                 <div class="skill-inner">
                                     <div class="icon-box">
-                                        <img src="assets/img/icons/xd.svg" alt="">
+                                        <img src="assets/img/icons/xd.svg" alt="" loading="lazy">
                                     </div>
                                     <div class="number">85%</div>
                                 </div>
@@ -802,7 +1140,7 @@
                             <div class="skill-item wow fadeInUp" data-wow-delay=".6s">
                                 <div class="skill-inner">
                                     <div class="icon-box">
-                                        <img src="assets/img/icons/wp.svg" alt="">
+                                        <img src="assets/img/icons/wp.svg" alt="" loading="lazy">
                                     </div>
                                     <div class="number">82%</div>
                                 </div>
@@ -840,7 +1178,8 @@
                     <div class="col-lg-5">
                         <div class="section-header">
                             <h2 class="section-title wow fadeInLeft" data-wow-delay=".3s">My Client's Stories</h2>
-                            <p class=" wow fadeInLeft" data-wow-delay=".4s">See How My Designs Have Transformed Businesses and Brought Visions to Life</p>
+                            <p class=" wow fadeInLeft" data-wow-delay=".4s">See How My Designs Have Transformed
+                                Businesses and Brought Visions to Life</p>
                         </div>
                     </div>
 
@@ -850,10 +1189,10 @@
                                 <div class="testimonial-item">
                                     <div class="top-area d-flex flex-wrap justify-content-between">
                                         <div class="logo-box">
-                                            <img src="assets/img/testimonials/logo/1.png" alt="">
+                                            <img src="assets/img/testimonials/logo/1.png" alt="" loading="lazy">
                                         </div>
                                         <div class="image-box">
-                                            <img src="assets/img/testimonials/user/1.jpg" alt="">
+                                            <img src="assets/img/testimonials/user/1.jpg" alt="" loading="lazy">
                                         </div>
                                     </div>
                                     <div class="icon-box">
@@ -886,17 +1225,19 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="quote">“Mohit is a professional designer who really helped my business by providing immense value. His work perfectly captured our vision and took our brand to the next level" </p>
+                                    <p class="quote">“Mohit is a professional designer who really helped my business by
+                                        providing immense value. His work perfectly captured our vision and took our
+                                        brand to the next level" </p>
                                     <h4 class="name">Brandon Fraser</h4>
                                     <span class="designation">Senior Software Dev, Cosmic Sport</span>
                                 </div>
                                 <div class="testimonial-item">
                                     <div class="top-area d-flex flex-wrap justify-content-between">
                                         <div class="logo-box">
-                                            <img src="assets/img/testimonials/logo/2.png" alt="">
+                                            <img src="assets/img/testimonials/logo/2.png" alt="" loading="lazy">
                                         </div>
                                         <div class="image-box">
-                                            <img src="assets/img/testimonials/user/2.jpg" alt="">
+                                            <img src="assets/img/testimonials/user/2.jpg" alt="" loading="lazy">
                                         </div>
                                     </div>
                                     <div class="icon-box">
@@ -929,17 +1270,19 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="quote">2.	"Mohit's designs have brought our social media to life. His creativity and understanding of our brand have significantly boosted our engagement. Our followers love the fresh and vibrant posts!"</p>
+                                    <p class="quote">2. "Mohit's designs have brought our social media to life. His
+                                        creativity and understanding of our brand have significantly boosted our
+                                        engagement. Our followers love the fresh and vibrant posts!"</p>
                                     <h4 class="name">Tim Bailey</h4>
                                     <span class="designation">SEO Specialist, Theme Junction</span>
                                 </div>
                                 <div class="testimonial-item">
                                     <div class="top-area d-flex flex-wrap justify-content-between">
                                         <div class="logo-box">
-                                            <img src="assets/img/testimonials/logo/1.png" alt="">
+                                            <img src="assets/img/testimonials/logo/1.png" alt="" loading="lazy">
                                         </div>
                                         <div class="image-box">
-                                            <img src="assets/img/testimonials/user/1.jpg" alt="">
+                                            <img src="assets/img/testimonials/user/1.jpg" alt="" loading="lazy">
                                         </div>
                                     </div>
                                     <div class="icon-box">
@@ -972,17 +1315,19 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="quote">3.	"The designs Mohit created for us are simply outstanding. They’re unique, memorable, and perfectly capture the essence of our business. We've received numerous compliments on our new look."</p>
+                                    <p class="quote">3. "The designs Mohit created for us are simply outstanding.
+                                        They’re unique, memorable, and perfectly capture the essence of our business.
+                                        We've received numerous compliments on our new look."</p>
                                     <h4 class="name">Brandon Fraser</h4>
                                     <span class="designation">Senior Software Dev, Cosmic Sport</span>
                                 </div>
                                 <div class="testimonial-item">
                                     <div class="top-area d-flex flex-wrap justify-content-between">
                                         <div class="logo-box">
-                                            <img src="assets/img/testimonials/logo/2.png" alt="">
+                                            <img src="assets/img/testimonials/logo/2.png" alt="" loading="lazy">
                                         </div>
                                         <div class="image-box">
-                                            <img src="assets/img/testimonials/user/2.jpg" alt="">
+                                            <img src="assets/img/testimonials/user/2.jpg" alt="" loading="lazy">
                                         </div>
                                     </div>
                                     <div class="icon-box">
@@ -1015,17 +1360,19 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="quote">4.	"Mohit’s digital art is nothing short of amazing. His attention to detail and artistic flair have added a whole new dimension to our projects. His work consistently exceeds our expectations." </p>
+                                    <p class="quote">4. "Mohit’s digital art is nothing short of amazing. His attention
+                                        to detail and artistic flair have added a whole new dimension to our projects.
+                                        His work consistently exceeds our expectations." </p>
                                     <h4 class="name">Tim Bailey</h4>
                                     <span class="designation">SEO Specialist, Theme Junction</span>
                                 </div>
                                 <div class="testimonial-item">
                                     <div class="top-area d-flex flex-wrap justify-content-between">
                                         <div class="logo-box">
-                                            <img src="assets/img/testimonials/logo/1.png" alt="">
+                                            <img src="assets/img/testimonials/logo/1.png" alt=""loading="lazy">
                                         </div>
                                         <div class="image-box">
-                                            <img src="assets/img/testimonials/user/1.jpg" alt="">
+                                            <img src="assets/img/testimonials/user/1.jpg" alt=""loading="lazy">
                                         </div>
                                     </div>
                                     <div class="icon-box">
@@ -1058,17 +1405,19 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="quote">"The designs Mohit delivered transformed our user experience. His work is not only visually appealing but also highly functional and user-friendly. We’ve seen a significant increase in user satisfaction." </p>
+                                    <p class="quote">"The designs Mohit delivered transformed our user experience. His
+                                        work is not only visually appealing but also highly functional and
+                                        user-friendly. We’ve seen a significant increase in user satisfaction." </p>
                                     <h4 class="name">Brandon Fraser</h4>
                                     <span class="designation">Senior Software Dev, Cosmic Sport</span>
                                 </div>
                                 <div class="testimonial-item">
                                     <div class="top-area d-flex flex-wrap justify-content-between">
                                         <div class="logo-box">
-                                            <img src="assets/img/testimonials/logo/2.png" alt="">
+                                            <img src="assets/img/testimonials/logo/2.png" alt="" loading="lazy" >
                                         </div>
                                         <div class="image-box">
-                                            <img src="assets/img/testimonials/user/2.jpg" alt="">
+                                            <img src="assets/img/testimonials/user/2.jpg" alt="" loading="lazy" >
                                         </div>
                                     </div>
                                     <div class="icon-box">
@@ -1101,7 +1450,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="quote">"Mohit is a true professional. Whether it's branding, logos, or digital art, he brings a unique blend of creativity and expertise to every project. His designs have consistently elevated our brand." </p>
+                                    <p class="quote">"Mohit is a true professional. Whether it's branding, logos, or
+                                        digital art, he brings a unique blend of creativity and expertise to every
+                                        project. His designs have consistently elevated our brand." </p>
                                     <h4 class="name">Tim Bailey</h4>
                                     <span class="designation">SEO Specialist, Theme Junction</span>
                                 </div>
@@ -1199,7 +1550,8 @@
                         <div class="contact-form-box wow fadeInLeft" data-wow-delay=".3s">
                             <div class="section-header">
                                 <h2 class="section-title">Let’s work together!</h2>
-                                <p>“I create beautifully simple designs and I absolutely love what I do. Just simple like that!”
+                                <p>“I create beautifully simple designs and I absolutely love what I do. Just simple
+                                    like that!”
                                 </p>
                             </div>
 
@@ -1292,7 +1644,9 @@
                                     </div>
                                 </li>
                             </ul>
+
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -1346,7 +1700,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <div class="footer-logo-box">
-                        <a href="#"><img src="assets/img/logo/Logo 1.png" alt=""></a>
+                        <a href="#"><img src="assets/img/logo/Logo 1.png" alt="" loading="lazy"></a>
                     </div>
                     <div class="footer-menu">
                         <nav>
@@ -1362,9 +1716,20 @@
                     </div>
                     <div class="copy-text">
                         <p>&copy; 2024 All rights reserved by <a href="#" target="_blank">Mohit Doad</a></p>
-                        <p>Devloped By <a href="https://dhruvrohit.netlify.app/" target="_blank" style="color:white;">Dhruv Rohit</a></p>
+                        <p>Devloped By <a href="https://dhruvrohit.netlify.app/" target="_blank"
+                                style="color:white;">Dhruv Rohit</a></p>
+                    </div>
+                    <div style="display: flex;justify-content: center; margin-top:.5rem;">
+
+                        <ul class="ul-reset social-icons">
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-light fa-basketball"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                        </ul>
                     </div>
                 </div>
+
             </div>
         </div>
     </footer>
@@ -1389,8 +1754,31 @@
     <script src="assets/js/validate.min.js"></script>
 
     <script src="assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.service-link').magnificPopup({
+                items: {
+                    src: '#pdf-modal',
+                    type: 'inline'
+                },
+                closeBtnInside: true,
+                callbacks: {
+                    open: function() {
+                        var pdfUrl = this.st.el.attr('data-pdf-url');
+                        $('#pdf-modal iframe').attr('src', pdfUrl);
+                    },
+                    close: function() {
+                        $('#pdf-modal iframe').attr('src', '');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 
 <!-- Mirrored from themejunction.net/html/gerold/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 May 2024 03:16:11 GMT -->
+
 </html>
