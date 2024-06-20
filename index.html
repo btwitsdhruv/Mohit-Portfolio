@@ -29,10 +29,7 @@
     <link rel="stylesheet" href="assets/css/light-mode.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
-        .content-box {
-            display: none;
-        }
-
+        
         .pdf-modal {
             max-width: 70%;
             margin: auto;
@@ -50,6 +47,85 @@
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
         }
+        :root {
+    --tj-body-light: #dddddd;
+    --tj-white-light: #ffffff;
+    --tj-off-white-light: #f6f3fc;
+    --tj-black-light: #000000;
+    --tj-black-2-light: #050709;
+    --tj-heading-primary-light: #102039;
+    --tj-heading-secondary-light: #ea1826;
+    --tj-theme-primary-light: #8750f7;
+    --tj-theme-secondary-light: #2a1454;
+    --tj-theme-accent-1-light: #0f0715;
+    --tj-theme-accent-2-light: #140c1c;
+    --tj-grey-1-light: #747779;
+    --tj-grey-2-light: #d9d9d9;
+    --tj-grey-3-light: #dddddd;
+    --tj-grey-4-light: #22272c;
+
+    --tj-body-dark: #22272c;
+    --tj-white-dark: #141414;
+    --tj-off-white-dark: #1a1a1a;
+    --tj-black-dark: #e1e1e1;
+    --tj-black-2-dark: #d4d4d4;
+    --tj-heading-primary-dark: #f1f1f1;
+    --tj-heading-secondary-dark: #f7f7f7;
+    --tj-theme-primary-dark: #7851a9;
+    --tj-theme-secondary-dark: #1c1c54;
+    --tj-theme-accent-1-dark: #262626;
+    --tj-theme-accent-2-dark: #2c2c2c;
+    --tj-grey-1-dark: #a1a1a1;
+    --tj-grey-2-dark: #5a5a5a;
+    --tj-grey-3-dark: #444444;
+    --tj-grey-4-dark: #1b1b1b;
+}
+
+/* Default to light mode */
+:root {
+    --tj-body: var(--tj-body-light);
+    --tj-white: var(--tj-white-light);
+    --tj-off-white: var(--tj-off-white-light);
+    --tj-black: var(--tj-black-light);
+    --tj-black-2: var(--tj-black-2-light);
+    --tj-heading-primary: var(--tj-heading-primary-light);
+    --tj-heading-secondary: var(--tj-heading-secondary-light);
+    --tj-theme-primary: var(--tj-theme-primary-light);
+    --tj-theme-secondary: var(--tj-theme-secondary-light);
+    --tj-theme-accent-1: var(--tj-theme-accent-1-light);
+    --tj-theme-accent-2: var(--tj-theme-accent-2-light);
+    --tj-grey-1: var(--tj-grey-1-light);
+    --tj-grey-2: var(--tj-grey-2-light);
+    --tj-grey-3: var(--tj-grey-3-light);
+    --tj-grey-4: var(--tj-grey-4-light);
+}
+
+body {
+    font-family: var(--tj-ff-body);
+    font-size: var(--tj-fz-body);
+    font-weight: var(--tj-fw-regular);
+    color: var(--tj-body);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    --tj-body: var(--tj-body-dark);
+    --tj-white: var(--tj-white-dark);
+    --tj-off-white: var(--tj-off-white-dark);
+    --tj-black: var(--tj-black-dark);
+    --tj-black-2: var(--tj-black-2-dark);
+    --tj-heading-primary: var(--tj-heading-primary-dark);
+    --tj-heading-secondary: var(--tj-heading-secondary-dark);
+    --tj-theme-primary: var(--tj-theme-primary-dark);
+    --tj-theme-secondary: var(--tj-theme-secondary-dark);
+    --tj-theme-accent-1: var(--tj-theme-accent-1-dark);
+    --tj-theme-accent-2: var(--tj-theme-accent-2-dark);
+    --tj-grey-1: var(--tj-grey-1-dark);
+    --tj-grey-2: var(--tj-grey-2-dark);
+    --tj-grey-3: var(--tj-grey-3-dark);
+    --tj-grey-4: var(--tj-grey-4-dark);
+}
+
        
     </style>
 </head>
@@ -57,7 +133,7 @@
 <body>
 
     <!-- Preloader Area Start -->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
             <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
         </svg>
@@ -73,7 +149,7 @@
                 <span>g</span>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Preloader Area End -->
 
 
@@ -115,10 +191,14 @@
                             </ul>
                         </nav>
                     </div>
-
                     <div class="header-button">
                         <a href="#" class="btn tj-btn-primary">Hire me!</a>
                     </div>
+                    <!-- <div class="checkbox-apple">
+                        <input class="yep" id="check-apple" type="checkbox">
+                        <label for="check-apple"></label>
+                      </div> -->
+                      
 
                     <div class="menu-bar d-lg-none">
                         <button>
@@ -156,7 +236,6 @@
                                 <li><a href="#works-section">Works</a></li>
                                 <li><a href="#resume-section">Resume</a></li>
                                 <li><a href="#skills-section">Skills</a></li>
-
                                 <li><a href="#contact-section">Contact</a></li>
                             </ul>
                         </nav>
@@ -357,7 +436,6 @@
                                 <div class="active-bg"></div>
                             </div>
                         </div>
-
                         <div class="portfolio-box wow fadeInUp" data-wow-delay=".6s">
                             <div class="portfolio-sizer"></div>
                             <div class="gutter-sizer"></div>
@@ -366,10 +444,10 @@
                                     <img src="assets/brand.png" alt="" loading="lazy">
                                 </div>
                                 <div class="content-box">
-                                    <h3 class="portfolio-title">Deloitte</h3>
-                                    <p>Project was about precision and information.</p>
+                                    <h3 class="portfolio-title">Brand</h3>
+                                    <!-- <p>Project was about precision and information.</p> -->
                                     <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
+                                    <button data-mfp-src="#portfolio-wrapper1"
                                         class="portfolio-link modal-popup"></button>
                                 </div>
                             </div>
@@ -377,622 +455,172 @@
 
                             <div class="portfolio-item social-media">
                                 <div class="image-box">
-                                    <img src="assets/Social Media/1.webp" alt="" loading="lazy">
+                                    <img src="assets/Cover photo/Social Media.webp" alt="" loading="lazy">
                                 </div>
                                 <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
+                                    <h3 class="portfolio-title">Social-Media</h3>
+                                    <!-- <p>Project was about precision and information.</p> -->
                                     <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
+                                    <button data-mfp-src="#portfolio-wrapper2"
                                         class="portfolio-link modal-popup"></button>
                                 </div>
                             </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/2.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/3.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/4.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/5.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/6.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/7.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/8.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/9.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/10.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/11.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/12.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/13.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/14.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/15.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/16.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/17.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Social Media/18.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
+
                             <!-- finish socia media images -->
 
                             <!-- logox -->
+                             
                             <div class="portfolio-item logox">
                                 <div class="image-box">
-                                    <img src="assets/Logos/1.webp" alt="" loading="lazy">
+                                    <img src="assets/Cover photo/LOGO.webp" alt="" loading="lazy">
                                 </div>
                                 <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
+                                    <h3 class="portfolio-title">Logo</h3>
+                                    <!-- <p>Project was about precision and information.</p> -->
                                     <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
+                                    <button data-mfp-src="#portfolio-wrapper3"
                                         class="portfolio-link modal-popup"></button>
                                 </div>
                             </div>
-                            <div class="portfolio-item logox">
-                                <div class="image-box">
-                                    <img src="assets/Logos/2.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item logox">
-                                <div class="image-box">
-                                    <img src="assets/Logos/3.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item logox">
-                                <div class="image-box">
-                                    <img src="assets/Logos/4.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item logox">
-                                <div class="image-box">
-                                    <img src="assets/Logos/5.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item logox">
-                                <div class="image-box">
-                                    <img src="assets/Logos/6.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item logox">
-                                <div class="image-box">
-                                    <img src="assets/Logos/7.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item logox">
-                                <div class="image-box">
-                                    <img src="assets/Logos/8.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-
+                            
                             <!--finish logox  -->
+                              <!-- digitalart -->
+                             
+                              <div class="portfolio-item mobile-app">
+                                <div class="image-box">
+                                    <img src="assets/Cover photo/Digital Art.webp" alt="" loading="lazy">
+                                </div>
+                                <div class="content-box">
+                                    <h3 class="portfolio-title">Digital-Art</h3>
+                                    <!-- <p>Project was about precision and information.</p> -->
+                                    <i class="flaticon-up-right-arrow"></i>
+                                    <button data-mfp-src="#portfolio-wrapper4"
+                                        class="portfolio-link modal-popup"></button>
+                                </div>
+                            </div>
+                            <!-- finish digital art -->
                             <!-- uiux -->
 
                             <div class="portfolio-item uxui">
                                 <div class="image-box">
-                                    <img src="assets/Ui-Ux/sneaker.webp" alt="" loading="lazy">
+                                    <img src="assets/Cover photo/UI-UX.webp" alt="" loading="lazy">
                                 </div>
                                 <div class="content-box">
-                                    <h3 class="portfolio-title">New Age</h3>
-                                    <p>Project was about precision and information.</p>
+                                    <h3 class="portfolio-title">Ui-Ux</h3>
+                                    <!-- <p>Project was about precision and information.</p> -->
                                     <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
+                                    <button data-mfp-src="#portfolio-wrapper5"
                                         class="portfolio-link modal-popup"></button>
                                 </div>
                             </div>
                             <!-- finish uiux -->
-                            <!-- digitalart -->
-                            <div class="portfolio-item mobile-app">
-                                <div class="image-box">
-                                    <img src="assets/Digital Art/1 (1).webp" alt="" loading="lazy">
-                                </div>
-
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Sebastian</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item mobile-app">
-                                <div class="image-box">
-                                    <img src="assets/Digital Art/2.webp" alt="" loading="lazy">
-                                </div>
-
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Sebastian</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item mobile-app">
-                                <div class="image-box">
-                                    <img src="assets/Digital Art/3.webp" alt="" loading="lazy">
-                                </div>
-
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Sebastian</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item mobile-app">
-                                <div class="image-box">
-                                    <img src="assets/Digital Art/4.webp" alt="" loading="lazy">
-                                </div>
-
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Sebastian</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item mobile-app">
-                                <div class="image-box">
-                                    <img src="assets/Digital Art/5.webp" alt="" loading="lazy">
-                                </div>
-
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Sebastian</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item mobile-app">
-                                <div class="image-box">
-                                    <img src="assets/Digital Art/6.webp" alt="" loading="lazy">
-                                </div>
-
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Sebastian</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item mobile-app">
-                                <div class="image-box">
-                                    <img src="assets/Digital Art/7.webp" alt="" loading="lazy">
-                                </div>
-
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Sebastian</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item mobile-app">
-                                <div class="image-box">
-                                    <img src="assets/Digital Art/8.webp" alt="" loading="lazy">
-                                </div>
-
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Sebastian</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item mobile-app">
-                                <div class="image-box">
-                                    <img src="assets/Digital Art/9.webp" alt="" loading="lazy">
-                                </div>
-
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Sebastian</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item mobile-app">
-                                <div class="image-box">
-                                    <img src="assets/Digital Art/10.webp" alt="" loading="lazy">
-                                </div>
-
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Sebastian</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <div class="portfolio-item mobile-app">
-                                <div class="image-box">
-                                    <img src="assets/Digital Art/11.webp" alt="" loading="lazy">
-                                </div>
-
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Sebastian</h3>
-                                    <p>Project was about precision and information.</p>
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-
-                            <!-- finish digital art -->
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+      
         <!-- PORTFOLIO SECTION END -->
 
         <!-- start: Portfolio Popup -->
-        <div id="portfolio-wrapper" class="popup_content_area zoom-anim-dialog mfp-hide">
-            <div class="popup_modal_img">
-                <img src="assets/img/portfolio/modal-img.jpg" alt="" loading="lazy">
-            </div>
 
-            <div class="popup_modal_content">
-                <div class="portfolio_info">
-                    <div class="portfolio_info_text">
-                        <h2 class="title">DStudio</h2>
-                        <div class="desc">
-                            <p>They are was greater open above shelter lets itself under appear sixth open gathering
-                                made
-                                upon can't own above midst gathering gathered he one us saying can't divide.</p>
-                        </div>
-                        <a href="#" class="btn tj-btn-primary">live preview <i class="fal fa-arrow-right"></i></a>
-                    </div>
-                    <div class="portfolio_info_items">
-                        <div class="info_item">
-                            <div class="key">Category</div>
-                            <div class="value">Web Design</div>
-                        </div>
-                        <div class="info_item">
-                            <div class="key">Client</div>
-                            <div class="value">Artboard Studio</div>
-                        </div>
-                        <div class="info_item">
-                            <div class="key">Start Date</div>
-                            <div class="value">August 20, 2023</div>
-                        </div>
-                        <div class="info_item">
-                            <div class="key">Designer</div>
-                            <div class="value"><a href="#">ThemeJunction</a></div>
-                        </div>
-                    </div>
-                </div>
+        <div id="portfolio-wrapper1" class="popup_content_area zoom-anim-dialog mfp-hide">
+            <!-- <span class="close">&times;</span> -->
+            <div class="modal-content">
+                <div class="slider">
+                    <div class="popup_modal_img">
+                        <img class="slider-image" src="assets/brand.png" alt="">
 
-                <div class="portfolio_gallery owl-carousel">
-                    <div class="gallery_item">
-                        <img src="assets/img/portfolio-gallery/p-gallery-1.jpg" alt=""  loading="lazy">
-                    </div>
-                    <div class="gallery_item">
-                        <img src="assets/img/portfolio-gallery/p-gallery-2.jpg" alt="" loading="lazy">
-                    </div>
-                    <div class="gallery_item">
-                        <img src="assets/img/portfolio-gallery/p-gallery-3.jpg" alt="" loading="lazy">
-                    </div>
-                    <div class="gallery_item">
-                        <img src="assets/img/portfolio-gallery/p-gallery-4.jpg" alt="" loading="lazy">
-                    </div>
-                </div>
-
-                <div class="portfolio_description">
-                    <h2 class="title">Project Description</h2>
-                    <div class="desc">
-                        <p>The goal is there are many variations of passages of Lorem Ipsum available, but the majority
-                            have
-                            suffered alteration in some form, by injected humour, or randomised words which don't look
-                            even
-                            slightly believable.</p>
-
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered
-                            alteration in some form, by injected humour, or randomised words which don't look even
-                            slightly
-                            believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                            isn't
-                            anything embarrassing hidden in the middle of text.</p>
-                    </div>
-                </div>
-
-                <div class="portfolio_story_approach">
-                    <div class="portfolio_story">
-                        <div class="story_title">
-                            <h4 class="title">The story</h4>
-                        </div>
-                        <div class="story_content">
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look
-                                even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to
-                                be
-                                sure there isn't anything embarrassing hidden in the middle of text. There are many
-                                variations of passages of Lorem Ipsum available, but the majority have suffered
-                                alteration
-                                in some form, by injected humour, or randomised words which don't look even slightly
-                                believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                                isn't anything embarrassing hidden in the middle of text.</p>
-                        </div>
-                    </div>
-                    <div class="portfolio_approach">
-                        <div class="approach_title">
-                            <h4 class="title">OUR APPROACH</h4>
-                        </div>
-                        <div class="approach_content">
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look
-                                even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to
-                                be
-                                sure there isn't anything embarrassing hidden in the middle of text. There are many
-                                variations of passages of Lorem Ipsum available, but the majority have suffered
-                                alteration
-                                in some form, by injected humour, or randomised words which don't look even slightly
-                                believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                                isn't anything embarrassing hidden in the middle of text.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio_navigation">
-                    <div class="navigation_item prev-project">
-                        <a href="#" class="project">
-                            <i class="fal fa-arrow-left"></i>
-                            <div class="nav_project">
-                                <div class="label">Previous Project</div>
-                                <h3 class="title">Sebastian</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="navigation_item next-project">
-                        <a href="#" class="project">
-                            <div class="nav_project">
-                                <div class="label">Next Project</div>
-                                <h3 class="title">Qwillo</h3>
-                            </div>
-                            <i class="fal fa-arrow-right"></i>
-                        </a>
                     </div>
                 </div>
             </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
         </div>
+        <div id="portfolio-wrapper2" class="popup_content_area zoom-anim-dialog mfp-hide">
+            <!-- <span class="close">&times;</span> -->
+            <div class="modal-content">
+                <div class="slider">
+                    <!-- <div class="popup_modal_img"> -->
+                        <img class="slider-image" src="assets/Social Media/1.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/2.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/3.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/4.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/5.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/6.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/7.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/8.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/9.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/10.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/11.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/12.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/13.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/14.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/15.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/16.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/17.webp" alt="">
+                        <img class="slider-image" src="assets/Social Media/18.webp" alt="">
+
+                    <!-- </div> -->
+                </div>
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+
+        <div id="portfolio-wrapper3" class="popup_content_area zoom-anim-dialog mfp-hide">
+            <!-- <span class="close">&times;</span> -->
+            <div class="modal-content">
+                <div class="slider">
+                    <!-- <div class="popup_modal_img"> -->
+                        <img class="slider-image" src="assets/Logos/1.webp" alt="">
+                        <img class="slider-image" src="assets/Logos/2.webp" alt="">
+                        <img class="slider-image" src="assets/Logos/3.webp" alt="">
+                        <img class="slider-image" src="assets/Logos/4.webp" alt="">
+                        <img class="slider-image" src="assets/Logos/5.webp" alt="">
+                        <img class="slider-image" src="assets/Logos/6.webp" alt="">
+                        <img class="slider-image" src="assets/Logos/7.webp" alt="">
+                        <img class="slider-image" src="assets/Logos/8.webp" alt="">
+                       
+                    <!-- </div> -->
+                </div>
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+
+        <div id="portfolio-wrapper4" class="popup_content_area zoom-anim-dialog mfp-hide">
+            <div class="modal-content">
+                <div class="slider">
+                    <img class="slider-image" src="assets/Digital Art/1 (1).webp" alt="">
+                    <img class="slider-image" src="assets/Digital Art/2.webp" alt="">
+                    <img class="slider-image" src="assets/Digital Art/3.webp" alt="">
+                    <img class="slider-image" src="assets/Digital Art/4.webp" alt="">
+                    <img class="slider-image" src="assets/Digital Art/5.webp" alt="">
+                    <img class="slider-image" src="assets/Digital Art/6.webp" alt="">
+                    <img class="slider-image" src="assets/Digital Art/7.webp" alt="">
+                    <img class="slider-image" src="assets/Digital Art/8.webp" alt="">
+                    <img class="slider-image" src="assets/Digital Art/9.webp" alt="">
+                    <img class="slider-image" src="assets/Digital Art/10.webp" alt="">
+                    <img class="slider-image" src="assets/Digital Art/11.webp" alt="">
+                </div>
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+
+        <div id="portfolio-wrapper5" class="popup_content_area zoom-anim-dialog mfp-hide">
+            <div class="modal-content">
+                <div class="slider">
+                    <img class="slider-image" src="assets/Ui-Ux/sneaker.webp" alt="">
+                </div>
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+
+
         <!-- end: Portfolio Popup -->
 
         <!-- RESUME SECTION START -->
@@ -1654,7 +1282,7 @@
         <!-- CONTACT SECTION END -->
 
         <!-- BEGIN: Contact Form Success Modal Message -->
-        <div class="modal contact_modal" id="message_sent" tabindex="-1">
+        <!-- <div class="modal contact_modal" id="message_sent" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -1670,11 +1298,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- END: Contact Form Success Modal Message -->
 
         <!-- BEGIN: Contact Form Fail Modal Message -->
-        <div class="modal contact_modal failed" id="message_fail" tabindex="-1">
+        <!-- <div class="modal contact_modal failed" id="message_fail" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -1688,9 +1316,9 @@
                     <div class="modal-footer">
                         <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
                     </div>
-                </div>
+                </div>  
             </div>
-        </div>
+        </div> -->
         <!-- END: Contact Form Fail Modal Message End -->
     </main>
 
@@ -1756,7 +1384,70 @@
     <script src="assets/js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script>
+   
+   <script>
+   document.addEventListener('DOMContentLoaded', function () {
+    var modals = document.querySelectorAll('.popup_content_area');
+    var buttons = document.querySelectorAll('.portfolio-link');
+    var spans = document.querySelectorAll('.close');
+    var prevs = document.querySelectorAll('.prev');
+    var nexts = document.querySelectorAll('.next');
+    var sliders = document.querySelectorAll('.slider');
+
+    buttons.forEach(function (button, index) {
+        button.onclick = function () {
+            modals[index].style.display = "block";
+            showSlides(index, 0);
+        }
+    });
+
+    spans.forEach(function (span, index) {
+        span.onclick = function () {
+            modals[index].style.display = "none";
+        }
+    });
+
+    window.onclick = function (event) {
+        modals.forEach(function (modal) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+
+    function showSlides(modalIndex, slideIndex) {
+        var slides = sliders[modalIndex].getElementsByClassName("slider-image");
+        if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        } else if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+        }
+
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+        }
+        slides[slideIndex].classList.add("active");
+    }
+
+    prevs.forEach(function (prev, index) {
+        prev.onclick = function () {
+            var activeIndex = Array.from(sliders[index].getElementsByClassName("slider-image")).findIndex(slide => slide.classList.contains("active"));
+            showSlides(index, activeIndex - 1);
+        }
+    });
+
+    nexts.forEach(function (next, index) {
+        next.onclick = function () {
+            var activeIndex = Array.from(sliders[index].getElementsByClassName("slider-image")).findIndex(slide => slide.classList.contains("active"));
+            showSlides(index, activeIndex + 1);
+        }
+    });
+});
+
+
+
+    </script>
+      <script>
         $(document).ready(function() {
             $('.service-link').magnificPopup({
                 items: {
@@ -1775,10 +1466,20 @@
                 }
             });
         });
+
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const checkbox = document.getElementById('check-apple');
+
+    checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
+    });
+});
+
     </script>
 </body>
-
-
-<!-- Mirrored from themejunction.net/html/gerold/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 May 2024 03:16:11 GMT -->
-
 </html>
