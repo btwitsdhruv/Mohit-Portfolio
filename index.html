@@ -439,9 +439,10 @@ body.dark-mode {
                         <div class="portfolio-box wow fadeInUp" data-wow-delay=".6s">
                             <div class="portfolio-sizer"></div>
                             <div class="gutter-sizer"></div>
+
                             <div class="portfolio-item branding">
                                 <div class="image-box">
-                                    <img src="assets/brand.png" alt="" loading="lazy">
+                                    <img src="assets/Cover photo/Brand.webp" alt="" loading="lazy">
                                 </div>
                                 <div class="content-box">
                                     <h3 class="portfolio-title">Brand</h3>
@@ -527,23 +528,25 @@ body.dark-mode {
 
         <div id="portfolio-wrapper1" class="popup_content_area zoom-anim-dialog mfp-hide">
             <!-- <span class="close">&times;</span> -->
-            <div class="modal-content">
-                <div class="slider">
-                    <div class="popup_modal_img">
-                        <img class="slider-image" src="assets/brand.png" alt="" loading="lazy">
-
-                    </div>
-                </div>
+            <span id="fullscreen-button">&#x26F6;</span> <!-- Fullscreen Button with ID -->
+    <div class="modal-content">
+        <div class="slider">
+            <!-- <div class="popup_modal_img"> -->
+                <img class="slider-image active" src="assets/brand.png" alt="">
+                <img class="slider-image" src="assets/brand.png" alt="">
             </div>
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
         </div>
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>    
+    </div>
+
         <div id="portfolio-wrapper2" class="popup_content_area zoom-anim-dialog mfp-hide">
             <!-- <span class="close">&times;</span> -->
+              <span id="fullscreen-button">&#x26F6;</span>
             <div class="modal-content">
                 <div class="slider">
                     <!-- <div class="popup_modal_img"> -->
-                        <img class="slider-image" src="assets/Social Media/1.webp" alt="" loading="lazy" >
+                        <img class="slider-image active" src="assets/Social Media/1.webp" alt="">
                         <img class="slider-image" src="assets/Social Media/2.webp" alt="" loading="lazy" >
                         <img class="slider-image" src="assets/Social Media/3.webp" alt="" loading="lazy" >
                         <img class="slider-image" src="assets/Social Media/4.webp" alt="" loading="lazy" >
@@ -571,10 +574,11 @@ body.dark-mode {
 
         <div id="portfolio-wrapper3" class="popup_content_area zoom-anim-dialog mfp-hide">
             <!-- <span class="close">&times;</span> -->
+            <span id="fullscreen-button">&#x26F6;</span>
             <div class="modal-content">
                 <div class="slider">
                     <!-- <div class="popup_modal_img"> -->
-                        <img class="slider-image" src="assets/Logos/1.webp" alt="" loading="lazy" >
+                        <img class="slider-image active" src="assets/Logos/1.webp" alt="" loading="lazy" >
                         <img class="slider-image" src="assets/Logos/2.webp" alt="" loading="lazy" >
                         <img class="slider-image" src="assets/Logos/3.webp" alt="" loading="lazy" >
                         <img class="slider-image" src="assets/Logos/4.webp" alt="" loading="lazy" >
@@ -591,9 +595,10 @@ body.dark-mode {
         </div>
 
         <div id="portfolio-wrapper4" class="popup_content_area zoom-anim-dialog mfp-hide">
+            <span id="fullscreen-button">&#x26F6;</span>
             <div class="modal-content">
                 <div class="slider">
-                    <img class="slider-image" src="assets/Digital Art/1 (1).webp" alt="" loading="lazy">
+                    <img class="slider-image active" src="assets/Digital Art/1 (1).webp" alt="" loading="lazy">
                     <img class="slider-image" src="assets/Digital Art/2.webp" alt="" loading="lazy">
                     <img class="slider-image" src="assets/Digital Art/3.webp" alt="" loading="lazy">
                     <img class="slider-image" src="assets/Digital Art/4.webp" alt="" loading="lazy">
@@ -609,16 +614,20 @@ body.dark-mode {
             <a class="prev">&#10094;</a>
             <a class="next">&#10095;</a>
         </div>
-
         <div id="portfolio-wrapper5" class="popup_content_area zoom-anim-dialog mfp-hide">
-            <div class="modal-content">
-                <div class="slider">
-                    <img class="slider-image" src="assets/Ui-Ux/sneaker.webp" alt="" loading="lazy">
-                </div>
+            <!-- <span class="close">&times;</span> -->
+            <span id="fullscreen-button">&#x26F6;</span> <!-- Fullscreen Button with ID -->
+    <div class="modal-content">
+        <div class="slider">
+            <!-- <div class="popup_modal_img"> -->
+                <img class="slider-image active" src="assets/Ui-Ux/sneaker.webp" alt="" loading="lazy">
+                
+               
             </div>
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
         </div>
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>    
+    </div>
 
 
         <!-- end: Portfolio Popup -->
@@ -1443,6 +1452,21 @@ body.dark-mode {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    var fullscreenButton = document.getElementById('fullscreen-button');
+    var sliders = document.querySelectorAll('.slider');
+
+    fullscreenButton.onclick = function () {
+        var activeSlide = document.querySelector('.slider-image.active');
+        if (activeSlide) {
+            if (activeSlide.classList.contains('fullscreen')) {
+                activeSlide.classList.remove('fullscreen');
+            } else {
+                activeSlide.classList.add('fullscreen');
+            }
+        }
+    };
+});
 
 
     </script>
