@@ -12,7 +12,7 @@
 
     <!-- Place favicon.ico in the root directory -->
     <link rel="apple-touch-icon" href="assets/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="shortcut icon" type="image/web" href="assets/img/logo/Logo 1.png"/>
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/animate.min.css">
@@ -29,111 +29,121 @@
     <link rel="stylesheet" href="assets/css/light-mode.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
-        
         .pdf-modal {
             max-width: 70%;
             margin: auto;
         }
+
         .pdf-modal iframe {
             width: 100%;
-            height: 88vh; /* Increase the height of the iframe */
-            border: none; /* Remove the default border */
+            height: 88vh;
+            /* Increase the height of the iframe */
+            border: none;
+            /* Remove the default border */
         }
-          /* Hide default scrollbar */
-          .pdf-modal iframe::-webkit-scrollbar {
+
+        /* Hide default scrollbar */
+        .pdf-modal iframe::-webkit-scrollbar {
             display: none;
         }
+
         .pdf-modal iframe {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
         }
+
         :root {
-    --tj-body-light: #dddddd;
-    --tj-white-light: #ffffff;
-    --tj-off-white-light: #f6f3fc;
-    --tj-black-light: #000000;
-    --tj-black-2-light: #050709;
-    --tj-heading-primary-light: #102039;
-    --tj-heading-secondary-light: #ea1826;
-    --tj-theme-primary-light: #8750f7;
-    --tj-theme-secondary-light: #2a1454;
-    --tj-theme-accent-1-light: #0f0715;
-    --tj-theme-accent-2-light: #140c1c;
-    --tj-grey-1-light: #747779;
-    --tj-grey-2-light: #d9d9d9;
-    --tj-grey-3-light: #dddddd;
-    --tj-grey-4-light: #22272c;
+            --tj-body-light: #dddddd;
+            --tj-white-light: #ffffff;
+            --tj-off-white-light: #f6f3fc;
+            --tj-black-light: #000000;
+            --tj-black-2-light: #050709;
+            --tj-heading-primary-light: #102039;
+            --tj-heading-secondary-light: #ea1826;
+            --tj-theme-primary-light: #8750f7;
+            --tj-theme-secondary-light: #2a1454;
+            --tj-theme-accent-1-light: #0f0715;
+            --tj-theme-accent-2-light: #140c1c;
+            --tj-grey-1-light: #747779;
+            --tj-grey-2-light: #d9d9d9;
+            --tj-grey-3-light: #dddddd;
+            --tj-grey-4-light: #22272c;
 
-    --tj-body-dark: #22272c;
-    --tj-white-dark: #141414;
-    --tj-off-white-dark: #1a1a1a;
-    --tj-black-dark: #e1e1e1;
-    --tj-black-2-dark: #d4d4d4;
-    --tj-heading-primary-dark: #f1f1f1;
-    --tj-heading-secondary-dark: #f7f7f7;
-    --tj-theme-primary-dark: #7851a9;
-    --tj-theme-secondary-dark: #1c1c54;
-    --tj-theme-accent-1-dark: #262626;
-    --tj-theme-accent-2-dark: #2c2c2c;
-    --tj-grey-1-dark: #a1a1a1;
-    --tj-grey-2-dark: #5a5a5a;
-    --tj-grey-3-dark: #444444;
-    --tj-grey-4-dark: #1b1b1b;
-}
+            --tj-body-dark: #22272c;
+            --tj-white-dark: #141414;
+            --tj-off-white-dark: #1a1a1a;
+            --tj-black-dark: #e1e1e1;
+            --tj-black-2-dark: #d4d4d4;
+            --tj-heading-primary-dark: #f1f1f1;
+            --tj-heading-secondary-dark: #f7f7f7;
+            --tj-theme-primary-dark: #7851a9;
+            --tj-theme-secondary-dark: #1c1c54;
+            --tj-theme-accent-1-dark: #262626;
+            --tj-theme-accent-2-dark: #2c2c2c;
+            --tj-grey-1-dark: #a1a1a1;
+            --tj-grey-2-dark: #5a5a5a;
+            --tj-grey-3-dark: #444444;
+            --tj-grey-4-dark: #1b1b1b;
+        }
 
-/* Default to light mode */
-:root {
-    --tj-body: var(--tj-body-light);
-    --tj-white: var(--tj-white-light);
-    --tj-off-white: var(--tj-off-white-light);
-    --tj-black: var(--tj-black-light);
-    --tj-black-2: var(--tj-black-2-light);
-    --tj-heading-primary: var(--tj-heading-primary-light);
-    --tj-heading-secondary: var(--tj-heading-secondary-light);
-    --tj-theme-primary: var(--tj-theme-primary-light);
-    --tj-theme-secondary: var(--tj-theme-secondary-light);
-    --tj-theme-accent-1: var(--tj-theme-accent-1-light);
-    --tj-theme-accent-2: var(--tj-theme-accent-2-light);
-    --tj-grey-1: var(--tj-grey-1-light);
-    --tj-grey-2: var(--tj-grey-2-light);
-    --tj-grey-3: var(--tj-grey-3-light);
-    --tj-grey-4: var(--tj-grey-4-light);
-}
+        /* Default to light mode */
+        :root {
+            --tj-body: var(--tj-body-light);
+            --tj-white: var(--tj-white-light);
+            --tj-off-white: var(--tj-off-white-light);
+            --tj-black: var(--tj-black-light);
+            --tj-black-2: var(--tj-black-2-light);
+            --tj-heading-primary: var(--tj-heading-primary-light);
+            --tj-heading-secondary: var(--tj-heading-secondary-light);
+            --tj-theme-primary: var(--tj-theme-primary-light);
+            --tj-theme-secondary: var(--tj-theme-secondary-light);
+            --tj-theme-accent-1: var(--tj-theme-accent-1-light);
+            --tj-theme-accent-2: var(--tj-theme-accent-2-light);
+            --tj-grey-1: var(--tj-grey-1-light);
+            --tj-grey-2: var(--tj-grey-2-light);
+            --tj-grey-3: var(--tj-grey-3-light);
+            --tj-grey-4: var(--tj-grey-4-light);
+        }
 
-body {
-    font-family: var(--tj-ff-body);
-    font-size: var(--tj-fz-body);
-    font-weight: var(--tj-fw-regular);
-    color: var(--tj-body);
-}
+        body {
+            font-family: var(--tj-ff-body);
+            font-size: var(--tj-fz-body);
+            font-weight: var(--tj-fw-regular);
+            color: var(--tj-body);
+            
+        }
 
-/* Dark mode styles */
-body.dark-mode {
-    --tj-body: var(--tj-body-dark);
-    --tj-white: var(--tj-white-dark);
-    --tj-off-white: var(--tj-off-white-dark);
-    --tj-black: var(--tj-black-dark);
-    --tj-black-2: var(--tj-black-2-dark);
-    --tj-heading-primary: var(--tj-heading-primary-dark);
-    --tj-heading-secondary: var(--tj-heading-secondary-dark);
-    --tj-theme-primary: var(--tj-theme-primary-dark);
-    --tj-theme-secondary: var(--tj-theme-secondary-dark);
-    --tj-theme-accent-1: var(--tj-theme-accent-1-dark);
-    --tj-theme-accent-2: var(--tj-theme-accent-2-dark);
-    --tj-grey-1: var(--tj-grey-1-dark);
-    --tj-grey-2: var(--tj-grey-2-dark);
-    --tj-grey-3: var(--tj-grey-3-dark);
-    --tj-grey-4: var(--tj-grey-4-dark);
-}
-
-       
+        /* Dark mode styles */
+        body.dark-mode {
+            --tj-body: var(--tj-body-dark);
+            --tj-white: var(--tj-white-dark);
+            --tj-off-white: var(--tj-off-white-dark);
+            --tj-black: var(--tj-black-dark);
+            --tj-black-2: var(--tj-black-2-dark);
+            --tj-heading-primary: var(--tj-heading-primary-dark);
+            --tj-heading-secondary: var(--tj-heading-secondary-dark);
+            --tj-theme-primary: var(--tj-theme-primary-dark);
+            --tj-theme-secondary: var(--tj-theme-secondary-dark);
+            --tj-theme-accent-1: var(--tj-theme-accent-1-dark);
+            --tj-theme-accent-2: var(--tj-theme-accent-2-dark);
+            --tj-grey-1: var(--tj-grey-1-dark);
+            --tj-grey-2: var(--tj-grey-2-dark);
+            --tj-grey-3: var(--tj-grey-3-dark);
+            --tj-grey-4: var(--tj-grey-4-dark);
+        }
+        /* .hero-section{
+            background:white ;
+            color: #2a1454;
+        } */
     </style>
 </head>
 
 <body>
 
     <!-- Preloader Area Start -->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
             <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
         </svg>
@@ -149,7 +159,7 @@ body.dark-mode {
                 <span>g</span>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Preloader Area End -->
 
 
@@ -192,13 +202,14 @@ body.dark-mode {
                         </nav>
                     </div>
                     <div class="header-button">
-                        <a href="#" class="btn tj-btn-primary">Hire me!</a>
+                        <div class="checkbox-apple">
+                            <input class="yep" id="check-apple" type="checkbox">
+                            <label for="check-apple"></label>
+                          </div>
+                        <!-- <a href="#" class="btn tj-btn-primary">Hire me!</a> -->
                     </div>
-                    <!-- <div class="checkbox-apple">
-                        <input class="yep" id="check-apple" type="checkbox">
-                        <label for="check-apple"></label>
-                      </div> -->
-                      
+
+
 
                     <div class="menu-bar d-lg-none">
                         <button>
@@ -240,9 +251,12 @@ body.dark-mode {
                             </ul>
                         </nav>
                     </div>
-
                     <div class="header-button">
-                        <a href="#" class="btn tj-btn-primary">Hire me!</a>
+                        <div class="checkbox-apple">
+                            <input class="yep" id="check-apple" type="checkbox">
+                            <label for="check-apple"></label>
+                          </div>
+                        <!-- <a href="#" class="btn tj-btn-primary">Hire me!</a> -->
                     </div>
 
                     <div class="menu-bar d-lg-none">
@@ -278,7 +292,8 @@ body.dark-mode {
                             </h1>
 
                             <div class="hero-image-box d-md-none text-center">
-                                <img src="assets/img/hero/me.png" alt="" style="width: 50%; height: auto;" loading="lazy">
+                                <img src="assets/img/hero/me.png" alt="" style="width: 50%; height: auto;"
+                                    loading="lazy">
                             </div>
 
                             <p class="lead">I turn complex design challenges into elegant, integrity-driven visuals that
@@ -370,7 +385,8 @@ body.dark-mode {
                                         engagement from your followers.</p>
                                 </div>
                                 <i class="flaticon-up-right-arrow"></i>
-                                <button data-pdf-url="assets/Social Media Design.pdf" class="service-link modal-popup"></button>
+                                <button data-pdf-url="assets/Social Media Design.pdf"
+                                    class="service-link modal-popup"></button>
                             </div>
                             <div class="service-item d-flex flex-wrap align-items-center wow fadeInUp"
                                 data-wow-delay=".7s">
@@ -385,13 +401,15 @@ body.dark-mode {
                                 <i class="flaticon-up-right-arrow"></i>
                                 <button data-pdf-url="assets/Logo Design.pdf" class="service-link modal-popup"></button>
                             </div>
-                            <div class="service-item d-flex flex-wrap align-items-center wow fadeInUp" data-wow-delay=".8s">
+                            <div class="service-item d-flex flex-wrap align-items-center wow fadeInUp"
+                                data-wow-delay=".8s">
                                 <div class="left-box d-flex flex-wrap align-items-center">
                                     <span class="number">04</span>
                                     <h3 class="service-title">UI/UX Design</h3>
                                 </div>
                                 <div class="right-box">
-                                    <p>Creating user-friendly and visually appealing interfaces that enhance user interaction and satisfaction.</p>
+                                    <p>Creating user-friendly and visually appealing interfaces that enhance user
+                                        interaction and satisfaction.</p>
                                 </div>
                                 <i class="flaticon-up-right-arrow"></i>
                                 <button data-pdf-url="assets/UIUXDesign.pdf" class="service-link modal-popup"></button>
@@ -423,7 +441,7 @@ body.dark-mode {
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <!-- <div class="col-md-12"> -->
                         <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
                             <div class="button-group filter-button-group">
                                 <button data-filter="*" class="active">All</button>
@@ -453,7 +471,7 @@ body.dark-mode {
                                 </div>
                             </div>
 
-<br>
+                            <br>
                             <div class="portfolio-item social-media">
                                 <div class="image-box">
                                     <img src="assets/Cover photo/Social Media.webp" alt="" loading="lazy">
@@ -468,9 +486,9 @@ body.dark-mode {
                             </div>
 
                             <!-- finish socia media images -->
-<br>
+                            <br>
                             <!-- logox -->
-                             
+
                             <div class="portfolio-item logox">
                                 <div class="image-box">
                                     <img src="assets/Cover photo/LOGO.webp" alt="" loading="lazy">
@@ -483,12 +501,12 @@ body.dark-mode {
                                         class="portfolio-link modal-popup"></button>
                                 </div>
                             </div>
-                            
+
                             <!--finish logox  -->
                             <br>
-                              <!-- digitalart -->
-                             
-                              <div class="portfolio-item mobile-app">
+                            <!-- digitalart -->
+
+                            <div class="portfolio-item mobile-app">
                                 <div class="image-box">
                                     <img src="assets/Cover photo/Digital Art.webp" alt="" loading="lazy">
                                 </div>
@@ -501,7 +519,7 @@ body.dark-mode {
                                 </div>
                             </div>
                             <!-- finish digital art -->
-                             <br>
+                            <br>
                             <!-- uiux -->
 
                             <div class="portfolio-item uxui">
@@ -517,56 +535,56 @@ body.dark-mode {
                                 </div>
                             </div>
                             <!-- finish uiux -->
-                             <br>
-                        </div>
-                        </div>
+                            <br>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
+            
+
+            <!-- start: Portfolio Popup -->
+
+            
+            <!-- end: Portfolio Popup -->
         </section>
-      
-        <!-- PORTFOLIO SECTION END -->
-
-        <!-- start: Portfolio Popup -->
-
         <div id="portfolio-wrapper1" class="popup_content_area zoom-anim-dialog mfp-hide">
             <!-- <span class="close">&times;</span> -->
-            <span id="fullscreen-button">&#x26F6;</span> <!-- Fullscreen Button with ID -->
-    <div class="modal-content">
-        <div class="slider">
-            <!-- <div class="popup_modal_img"> -->
-                <img class="slider-image active" src="assets/brand.png" alt="">
-                <img class="slider-image" src="assets/brand.png" alt="">
-            </div>
-        </div>
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>    
-    </div>
-
-        <div id="portfolio-wrapper2" class="popup_content_area zoom-anim-dialog mfp-hide">
-            <!-- <span class="close">&times;</span> -->
-              <span id="fullscreen-button">&#x26F6;</span>
+            <span class="fullscreen-button">&#x26F6;</span> <!-- Fullscreen Button with ID -->
             <div class="modal-content">
                 <div class="slider">
                     <!-- <div class="popup_modal_img"> -->
-                        <img class="slider-image active" src="assets/Social Media/1.webp" alt="">
-                        <img class="slider-image" src="assets/Social Media/2.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/3.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/4.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/5.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/6.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/7.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/8.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/9.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/10.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/11.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/12.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/13.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/14.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/15.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/16.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/17.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Social Media/18.webp" alt="" loading="lazy" >
+                    <img class="slider-image active" src="assets/brand.png" alt="">
+                    <img class="slider-image" src="assets/brand.png" alt="">
+                </div>
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+
+        <div id="portfolio-wrapper2" class="popup_content_area zoom-anim-dialog mfp-hide">
+            <!-- <span class="close">&times;</span> -->
+            <span class="fullscreen-button">&#x26F6;</span>
+            <div class="modal-content">
+                <div class="slider">
+                    <!-- <div class="popup_modal_img"> -->
+                    <img class="slider-image active" src="assets/Social Media/1.webp" alt="">
+                    <img class="slider-image" src="assets/Social Media/2.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/3.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/4.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/5.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/6.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/7.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/8.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/9.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/10.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/11.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/12.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/13.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/14.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/15.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/16.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/17.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Social Media/18.webp" alt="" loading="lazy">
 
                     <!-- </div> -->
                 </div>
@@ -577,19 +595,19 @@ body.dark-mode {
 
         <div id="portfolio-wrapper3" class="popup_content_area zoom-anim-dialog mfp-hide">
             <!-- <span class="close">&times;</span> -->
-            <span id="fullscreen-button">&#x26F6;</span>
+            <span class="fullscreen-button">&#x26F6;</span>
             <div class="modal-content">
                 <div class="slider">
                     <!-- <div class="popup_modal_img"> -->
-                        <img class="slider-image active" src="assets/Logos/1.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Logos/2.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Logos/3.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Logos/4.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Logos/5.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Logos/6.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Logos/7.webp" alt="" loading="lazy" >
-                        <img class="slider-image" src="assets/Logos/8.webp" alt="" loading="lazy" >
-                       
+                    <img class="slider-image active" src="assets/Logos/1.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Logos/2.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Logos/3.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Logos/4.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Logos/5.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Logos/6.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Logos/7.webp" alt="" loading="lazy">
+                    <img class="slider-image" src="assets/Logos/8.webp" alt="" loading="lazy">
+
                     <!-- </div> -->
                 </div>
             </div>
@@ -598,7 +616,7 @@ body.dark-mode {
         </div>
 
         <div id="portfolio-wrapper4" class="popup_content_area zoom-anim-dialog mfp-hide">
-            <span id="fullscreen-button">&#x26F6;</span>
+            <span class="fullscreen-button">&#x26F6;</span>
             <div class="modal-content">
                 <div class="slider">
                     <img class="slider-image active" src="assets/Digital Art/1 (1).webp" alt="" loading="lazy">
@@ -619,21 +637,22 @@ body.dark-mode {
         </div>
         <div id="portfolio-wrapper5" class="popup_content_area zoom-anim-dialog mfp-hide">
             <!-- <span class="close">&times;</span> -->
-            <span id="fullscreen-button">&#x26F6;</span> <!-- Fullscreen Button with ID -->
-    <div class="modal-content">
-        <div class="slider">
-            <!-- <div class="popup_modal_img"> -->
-                <img class="slider-image active" src="assets/Ui-Ux/sneaker.webp" alt="" loading="lazy">
-                
-               
+            <span class="fullscreen-button">&#x26F6;</span> <!-- Fullscreen Button with ID -->
+            <div class="modal-content">
+                <div class="slider">
+                    <!-- <div class="popup_modal_img"> -->
+                    <img class="slider-image active" src="assets/Ui-Ux/sneaker.webp" alt="" loading="lazy">
+
+
+                </div>
             </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
         </div>
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>    
-    </div>
 
 
-        <!-- end: Portfolio Popup -->
+        <!-- PORTFOLIO SECTION END -->
+
 
         <!-- RESUME SECTION START -->
         <section class="resume-section" id="resume-section">
@@ -647,7 +666,7 @@ body.dark-mode {
                         <div class="resume-widget">
                             <div class="resume-item wow fadeInLeft" data-wow-delay=".4s">
                                 <div class="time">
-                                    2022 - 2024                                </div>
+                                    2022 - 2024 </div>
                                 <h3 class="resume-title">Head Of Design </h3>
                                 <div class="institute">
                                     WictroniX
@@ -1008,10 +1027,10 @@ body.dark-mode {
                                 <div class="testimonial-item">
                                     <div class="top-area d-flex flex-wrap justify-content-between">
                                         <div class="logo-box">
-                                            <img src="assets/img/testimonials/logo/1.png" alt=""loading="lazy">
+                                            <img src="assets/img/testimonials/logo/1.png" alt="" loading="lazy">
                                         </div>
                                         <div class="image-box">
-                                            <img src="assets/img/testimonials/user/1.jpg" alt=""loading="lazy">
+                                            <img src="assets/img/testimonials/user/1.jpg" alt="" loading="lazy">
                                         </div>
                                     </div>
                                     <div class="icon-box">
@@ -1053,10 +1072,10 @@ body.dark-mode {
                                 <div class="testimonial-item">
                                     <div class="top-area d-flex flex-wrap justify-content-between">
                                         <div class="logo-box">
-                                            <img src="assets/img/testimonials/logo/2.png" alt="" loading="lazy" >
+                                            <img src="assets/img/testimonials/logo/2.png" alt="" loading="lazy">
                                         </div>
                                         <div class="image-box">
-                                            <img src="assets/img/testimonials/user/2.jpg" alt="" loading="lazy" >
+                                            <img src="assets/img/testimonials/user/2.jpg" alt="" loading="lazy">
                                         </div>
                                     </div>
                                     <div class="icon-box">
@@ -1395,86 +1414,87 @@ body.dark-mode {
     <script src="assets/js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-   
-   <script>
-   document.addEventListener('DOMContentLoaded', function () {
-    var modals = document.querySelectorAll('.popup_content_area');
-    var buttons = document.querySelectorAll('.portfolio-link');
-    var spans = document.querySelectorAll('.close');
-    var prevs = document.querySelectorAll('.prev');
-    var nexts = document.querySelectorAll('.next');
-    var sliders = document.querySelectorAll('.slider');
 
-    buttons.forEach(function (button, index) {
-        button.onclick = function () {
-            modals[index].style.display = "block";
-            showSlides(index, 0);
-        }
-    });
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var modals = document.querySelectorAll('.popup_content_area');
+            var buttons = document.querySelectorAll('.portfolio-link');
+            var spans = document.querySelectorAll('.close');
+            var prevs = document.querySelectorAll('.prev');
+            var nexts = document.querySelectorAll('.next');
+            var sliders = document.querySelectorAll('.slider');
 
-    spans.forEach(function (span, index) {
-        span.onclick = function () {
-            modals[index].style.display = "none";
-        }
-    });
+            buttons.forEach(function (button, index) {
+                button.onclick = function () {
+                    modals[index].style.display = "block";
+                    showSlides(index, 0);
+                }
+            });
 
-    window.onclick = function (event) {
-        modals.forEach(function (modal) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+            spans.forEach(function (span, index) {
+                span.onclick = function () {
+                    modals[index].style.display = "none";
+                }
+            });
+
+            window.onclick = function (event) {
+                modals.forEach(function (modal) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                });
             }
+
+            function showSlides(modalIndex, slideIndex) {
+                var slides = sliders[modalIndex].getElementsByClassName("slider-image");
+                if (slideIndex >= slides.length) {
+                    slideIndex = 0;
+                } else if (slideIndex < 0) {
+                    slideIndex = slides.length - 1;
+                }
+
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].classList.remove("active");
+                }
+                slides[slideIndex].classList.add("active");
+            }
+
+            prevs.forEach(function (prev, index) {
+                prev.onclick = function () {
+                    var activeIndex = Array.from(sliders[index].getElementsByClassName("slider-image")).findIndex(slide => slide.classList.contains("active"));
+                    showSlides(index, activeIndex - 1);
+                }
+            });
+
+            nexts.forEach(function (next, index) {
+                next.onclick = function () {
+                    var activeIndex = Array.from(sliders[index].getElementsByClassName("slider-image")).findIndex(slide => slide.classList.contains("active"));
+                    showSlides(index, activeIndex + 1);
+                }
+            });
         });
-    }
 
-    function showSlides(modalIndex, slideIndex) {
-        var slides = sliders[modalIndex].getElementsByClassName("slider-image");
-        if (slideIndex >= slides.length) {
-            slideIndex = 0;
-        } else if (slideIndex < 0) {
-            slideIndex = slides.length - 1;
-        }
-
-        for (var i = 0; i < slides.length; i++) {
-            slides[i].classList.remove("active");
-        }
-        slides[slideIndex].classList.add("active");
-    }
-
-    prevs.forEach(function (prev, index) {
-        prev.onclick = function () {
-            var activeIndex = Array.from(sliders[index].getElementsByClassName("slider-image")).findIndex(slide => slide.classList.contains("active"));
-            showSlides(index, activeIndex - 1);
-        }
-    });
-
-    nexts.forEach(function (next, index) {
-        next.onclick = function () {
-            var activeIndex = Array.from(sliders[index].getElementsByClassName("slider-image")).findIndex(slide => slide.classList.contains("active"));
-            showSlides(index, activeIndex + 1);
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    var fullscreenButton = document.getElementById('fullscreen-button');
-    var sliders = document.querySelectorAll('.slider');
-
-    fullscreenButton.onclick = function () {
-        var activeSlide = document.querySelector('.slider-image.active');
-        if (activeSlide) {
-            if (activeSlide.classList.contains('fullscreen')) {
-                activeSlide.classList.remove('fullscreen');
-            } else {
-                activeSlide.classList.add('fullscreen');
+        document.addEventListener('DOMContentLoaded', function () {
+    var fullscreenButtons = document.querySelectorAll('.fullscreen-button');
+    
+    fullscreenButtons.forEach(function(button) {
+        button.onclick = function () {
+            var activeSlide = this.closest('.popup_content_area').querySelector('.slider-image.active');
+            if (activeSlide) {
+                if (activeSlide.classList.contains('fullscreen')) {
+                    activeSlide.classList.remove('fullscreen');
+                } else {
+                    activeSlide.classList.add('fullscreen');
+                }
             }
-        }
-    };
+        };
+    });
 });
 
 
     </script>
-      <script>
-        $(document).ready(function() {
+    <script>
+        $(document).ready(function () {
             $('.service-link').magnificPopup({
                 items: {
                     src: '#pdf-modal',
@@ -1482,11 +1502,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 closeBtnInside: true,
                 callbacks: {
-                    open: function() {
+                    open: function () {
                         var pdfUrl = this.st.el.attr('data-pdf-url');
                         $('#pdf-modal iframe').attr('src', pdfUrl);
                     },
-                    close: function() {
+                    close: function () {
                         $('#pdf-modal iframe').attr('src', '');
                     }
                 }
@@ -1495,17 +1515,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         document.addEventListener('DOMContentLoaded', (event) => {
-    const checkbox = document.getElementById('check-apple');
+            const checkbox = document.getElementById('check-apple');
 
-    checkbox.addEventListener('change', () => {
-        if (checkbox.checked) {
-            document.body.classList.add('dark-mode');
-        } else {
-            document.body.classList.remove('dark-mode');
-        }
-    });
-});
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    document.body.classList.add('dark-mode');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                }
+            });
+        });
 
     </script>
 </body>
+
 </html>
