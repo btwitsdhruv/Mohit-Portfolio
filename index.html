@@ -12,7 +12,7 @@
 
     <!-- Place favicon.ico in the root directory -->
     <link rel="apple-touch-icon" href="assets/img/favicon.png" />
-    <link rel="shortcut icon" type="image/web" href="assets/img/logo/Logo 1.png"/>
+    <link rel="shortcut icon" type="image/web" href="assets/img/logo/Logo 1.png" />
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/animate.min.css">
@@ -112,7 +112,7 @@
             font-size: var(--tj-fz-body);
             font-weight: var(--tj-fw-regular);
             color: var(--tj-body);
-            
+
         }
 
         /* Dark mode styles */
@@ -133,6 +133,7 @@
             --tj-grey-3: var(--tj-grey-3-dark);
             --tj-grey-4: var(--tj-grey-4-dark);
         }
+
         /* .hero-section{
             background:white ;
             color: #2a1454;
@@ -143,7 +144,7 @@
 <body>
 
     <!-- Preloader Area Start -->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
             <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
         </svg>
@@ -159,7 +160,7 @@
                 <span>g</span>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Preloader Area End -->
 
 
@@ -205,7 +206,7 @@
                         <div class="checkbox-apple">
                             <input class="yep" id="check-apple" type="checkbox">
                             <label for="check-apple"></label>
-                          </div>
+                        </div>
                         <!-- <a href="#" class="btn tj-btn-primary">Hire me!</a> -->
                     </div>
 
@@ -255,7 +256,7 @@
                         <div class="checkbox-apple">
                             <input class="yep" id="check-apple" type="checkbox">
                             <label for="check-apple"></label>
-                          </div>
+                        </div>
                         <!-- <a href="#" class="btn tj-btn-primary">Hire me!</a> -->
                     </div>
 
@@ -442,108 +443,119 @@
 
                 <div class="row">
                     <!-- <div class="col-md-12"> -->
-                        <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
-                            <div class="button-group filter-button-group">
-                                <button data-filter="*" class="active">All</button>
-                                <button data-filter=".branding">Branding</button>
-                                <button data-filter=".social-media">SocialMedia</button>
-                                <button data-filter=".logox">Logo Designs</button>
-                                <button data-filter=".mobile-app">Digital Art</button>
-                                <button data-filter=".uxui">UI/UX</button>
+                    <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
+                        <div class="button-group filter-button-group">
+                            <button data-filter="*" class="active">All</button>
+                            <button data-filter=".branding">Branding</button>
+                            <button data-filter=".social-media">SocialMedia</button>
+                            <button data-filter=".logox">Logo Designs</button>
+                            <button data-filter=".mobile-app">Digital Art</button>
+                            <button data-filter=".uxui">UI/UX</button>
 
-                                <div class="active-bg"></div>
+                            <div class="active-bg"></div>
+                        </div>
+                    </div>
+                    <!-- <div class="portfolio-box-container"> -->
+
+                    
+                    <div class="portfolio-box wow">
+                        <div class="portfolio-sizer"></div>
+                        <div class="gutter-sizer"></div>
+
+                        <div class="portfolio-item branding">
+                            <div class="image-box">
+                                <img src="assets/Cover photo/Brand.webp" alt="" loading="lazy">
+                            </div>
+                            <div class="content-box">
+                                <h3 class="portfolio-title">Brand</h3>
+                                <!-- <p>Project was about precision and information.</p> -->
+                                <i class="flaticon-up-right-arrow"></i>
+                                <button data-pdf-url="assets/Brandings.pdf"
+                                    class="portfolio-link service-link modal-popup"></button>
                             </div>
                         </div>
-                        <div class="portfolio-box wow fadeInUp" data-wow-delay=".6s">
-                            <div class="portfolio-sizer"></div>
-                            <div class="gutter-sizer"></div>
-
-                            <div class="portfolio-item branding">
-                                <div class="image-box">
-                                    <img src="assets/Cover photo/Brand.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Brand</h3>
-                                    <!-- <p>Project was about precision and information.</p> -->
-                                    <i class="flaticon-up-right-arrow"></i>
-                                        <button data-pdf-url="assets/Brandings.pdf" class="portfolio-link service-link modal-popup"></button>
-                                </div>
+                    <!-- </div> -->
+                    <!-- <div class="portfolio-box wow">
+                        <div class="portfolio-sizer"></div>
+                        <div class="gutter-sizer"></div> -->
+                        <div class="portfolio-item social-media">
+                            <div class="image-box">
+                                <img src="assets/Cover photo/Social Media.webp" alt="" loading="lazy">
                             </div>
-
-                            <br>
-                            <div class="portfolio-item social-media">
-                                <div class="image-box">
-                                    <img src="assets/Cover photo/Social Media.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Social-Media</h3>
-                                    <!-- <p>Project was about precision and information.</p> -->
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper2"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
+                            <div class="content-box">
+                                <h3 class="portfolio-title">Social-Media</h3>
+                                <!-- <p>Project was about precision and information.</p> -->
+                                <i class="flaticon-up-right-arrow"></i>
+                                <button data-mfp-src="#portfolio-wrapper2" class="portfolio-link modal-popup"></button>
                             </div>
-
-                            <!-- finish socia media images -->
-                            <br>
-                            <!-- logox -->
-
-                            <div class="portfolio-item logox">
-                                <div class="image-box">
-                                    <img src="assets/Cover photo/LOGO.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Logo</h3>
-                                    <!-- <p>Project was about precision and information.</p> -->
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper3"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-
-                            <!--finish logox  -->
-                            <br>
-                            <!-- digitalart -->
-
-                            <div class="portfolio-item mobile-app">
-                                <div class="image-box">
-                                    <img src="assets/Cover photo/Digital Art.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Digital-Art</h3>
-                                    <!-- <p>Project was about precision and information.</p> -->
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper4"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <!-- finish digital art -->
-                            <br>
-                            <!-- uiux -->
-
-                            <div class="portfolio-item uxui">
-                                <div class="image-box">
-                                    <img src="assets/Cover photo/UI-UX.webp" alt="" loading="lazy">
-                                </div>
-                                <div class="content-box">
-                                    <h3 class="portfolio-title">Ui-Ux</h3>
-                                    <!-- <p>Project was about precision and information.</p> -->
-                                    <i class="flaticon-up-right-arrow"></i>
-                                    <button data-mfp-src="#portfolio-wrapper5"
-                                        class="portfolio-link modal-popup"></button>
-                                </div>
-                            </div>
-                            <!-- finish uiux -->
-                            <br>
-                        <!-- </div> -->
+                        </div>
+                    <!-- </div> -->
+                    <!-- finish socia media images -->
+                    
+                    <!-- logox -->
+                    <!-- <div class="portfolio-box wow">
+                        <div class="portfolio-sizer"></div>
+                        <div class="gutter-sizer"></div> -->
+                    <div class="portfolio-item logox">
+                        <div class="image-box">
+                            <img src="assets/Cover photo/LOGO.webp" alt="" loading="lazy">
+                        </div>
+                        <div class="content-box">
+                            <h3 class="portfolio-title">Logo</h3>
+                            <!-- <p>Project was about precision and information.</p> -->
+                            <i class="flaticon-up-right-arrow"></i>
+                            <button data-mfp-src="#portfolio-wrapper3" class="portfolio-link modal-popup"></button>
+                        </div>
                     </div>
+                    <!-- </div> -->
+
+                    <!--finish logox  -->
+                    
+                    <!-- digitalart -->
+                    <!-- <div class="portfolio-box wow">
+                        <div class="portfolio-sizer"></div>
+                        <div class="gutter-sizer"></div> -->
+                    <div class="portfolio-item mobile-app">
+                        <div class="image-box">
+                            <img src="assets/Cover photo/Digital Art.webp" alt="" loading="lazy">
+                        </div>
+                        <div class="content-box">
+                            <h3 class="portfolio-title">Digital-Art</h3>
+                            <!-- <p>Project was about precision and information.</p> -->
+                            <i class="flaticon-up-right-arrow"></i>
+                            <button data-mfp-src="#portfolio-wrapper4" class="portfolio-link modal-popup"></button>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- finish digital art -->
+                    <br>
+                    <!-- uiux -->
+                    <!-- <div class="portfolio-box wow">
+                        <div class="portfolio-sizer"></div>
+                        <div class="gutter-sizer"></div> -->
+                    <div class="portfolio-item uxui">
+                        <div class="image-box">
+                            <img src="assets/Cover photo/UI-UX.webp" alt="" loading="lazy">
+                        </div>
+                        <div class="content-box">
+                            <h3 class="portfolio-title">Ui-Ux</h3>
+                            <!-- <p>Project was about precision and information.</p> -->
+                            <i class="flaticon-up-right-arrow"></i>
+                            <button data-mfp-src="#portfolio-wrapper5" class="portfolio-link modal-popup"></button>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- finish uiux -->
+                    <!-- </div> -->
+                    <!-- </div> -->
                 </div>
             </div>
-            
+            </div>
+
 
             <!-- start: Portfolio Popup -->
 
-            
+
             <!-- end: Portfolio Popup -->
         </section>
         <div id="portfolio-wrapper1" class="popup_content_area zoom-anim-dialog mfp-hide">
@@ -1474,21 +1486,21 @@
         });
 
         document.addEventListener('DOMContentLoaded', function () {
-    var fullscreenButtons = document.querySelectorAll('.fullscreen-button');
-    
-    fullscreenButtons.forEach(function(button) {
-        button.onclick = function () {
-            var activeSlide = this.closest('.popup_content_area').querySelector('.slider-image.active');
-            if (activeSlide) {
-                if (activeSlide.classList.contains('fullscreen')) {
-                    activeSlide.classList.remove('fullscreen');
-                } else {
-                    activeSlide.classList.add('fullscreen');
-                }
-            }
-        };
-    });
-});
+            var fullscreenButtons = document.querySelectorAll('.fullscreen-button');
+
+            fullscreenButtons.forEach(function (button) {
+                button.onclick = function () {
+                    var activeSlide = this.closest('.popup_content_area').querySelector('.slider-image.active');
+                    if (activeSlide) {
+                        if (activeSlide.classList.contains('fullscreen')) {
+                            activeSlide.classList.remove('fullscreen');
+                        } else {
+                            activeSlide.classList.add('fullscreen');
+                        }
+                    }
+                };
+            });
+        });
 
 
     </script>
