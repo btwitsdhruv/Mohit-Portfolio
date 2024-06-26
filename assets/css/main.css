@@ -3512,10 +3512,9 @@ body.absolute_header .breadcrumb_area {
     position: relative;
     margin: auto;
     padding: 0;
-    width: 55%;
-    height: 50%;
-    max-width: 1200px;
-    object-fit: contain;
+    width: 100%;
+    /* height: 50%; */
+    /* max-width: 1200px; */
 }
 
 @media (max-width: 768px) {
@@ -3597,30 +3596,38 @@ body.absolute_header .breadcrumb_area {
     display: flex;
     overflow: hidden;
     width: 100%;
+	object-fit: contain;
 }
 
 .slider-image {
     display: none;
-    width: 80%; /* Small size */
+    width: 50%; /* Small size */
     height: auto;
     margin: 0 auto;
+	object-fit: cover;
     transition: width 0.5s ease, transform 0.5s ease;
 }
 
 .slider-image.active {
     display: block;
+	object-fit: contain;
 }
 
 .slider-image.fullscreen {
     width: 100%; /* Fullscreen size */
     height: auto;
 }
+.close{
+	cursor: pointer;
+	padding: 15px;
+	width: 50%;
+}
 
 /* Navigation Buttons */
 .prev,
 .next {
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     top: 50%;
     width: 50px;
     height: 50px;
@@ -3636,14 +3643,15 @@ body.absolute_header .breadcrumb_area {
     justify-content: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     user-select: none;
+    z-index: 1000; /* Ensure it's above other content */
 }
 
 .next {
-    right: -100px;
+    right: 20px; /* Adjust position from right */
 }
 
 .prev {
-    left: -100px;
+    left: 20px; /* Adjust position from left */
 }
 
 .prev:hover,
@@ -3696,7 +3704,7 @@ body.absolute_header .breadcrumb_area {
 	width: 50px;
 	height: 25px;
 	border-radius: 50px;
-	background: linear-gradient(to bottom, #b3b3b3, #e6e6e6);
+	background: linear-gradient(to bottom,#2a1454 , #8750f7);
 	cursor: pointer;
 	transition: all 0.3s ease;
   }
@@ -3715,7 +3723,7 @@ body.absolute_header .breadcrumb_area {
   }
   
   .checkbox-apple input[type="checkbox"]:checked + label {
-	background: linear-gradient(to bottom,#2a1454 , #8750f7);
+	background: linear-gradient(to bottom, #b3b3b3, #e6e6e6);
   }
   
   .checkbox-apple input[type="checkbox"]:checked + label:after {
@@ -3723,7 +3731,7 @@ body.absolute_header .breadcrumb_area {
   }
   
   .checkbox-apple label:hover {
-	background: linear-gradient(to bottom, #b3b3b3, #e6e6e6);
+	background: linear-gradient(to bottom,#2a1454 , #8750f7);
   }
   
   .checkbox-apple label:hover:after {
@@ -3737,7 +3745,4 @@ body.absolute_header .breadcrumb_area {
 	width: 50px;
 	height: 25px;
   }
-
-  
-  
 /* END: Modal CSS */
