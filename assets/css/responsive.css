@@ -1006,11 +1006,14 @@
 		object-fit: cover;
 		transition: width 0.5s ease, transform 0.5s ease;
 	}
-	.portfolio-box{
+	.portfolio-box {
 		display: flex;
-		padding-left: 50px;
-		padding-right: 50px;
-		width: 80%;
+		justify-content: center; /* Ensure horizontal centering */
+		left:0px;
+		width: 90%;
+		margin: 0 auto; /* Center horizontally using margin */
+	}
+	
 
 	}
 	
