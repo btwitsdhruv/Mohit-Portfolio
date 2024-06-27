@@ -1181,33 +1181,29 @@
                                     <div class="row gx-3">
                                         <div class="col-sm-6">
                                             <div class="form_group">
-                                                <input type="text" name="conName" id="conName" placeholder="First name"
-                                                    autocomplete="off">
+                                                <input type="text" name="conName" id="conName" placeholder="First name" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form_group">
-                                                <input type="text" name="conLName" id="conLName" placeholder="Last name"
-                                                    autocomplete="off">
+                                                <input type="text" name="conLName" id="conLName" placeholder="Last name" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form_group">
-                                                <input type="email" name="conEmail" id="conEmail"
-                                                    placeholder="Email address" autocomplete="off">
+                                                <input type="email" name="conEmail" id="conEmail" placeholder="Email address" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form_group">
-                                                <input type="tel" name="conPhone" id="conPhone"
-                                                    placeholder="Phone number" autocomplete="off">
+                                                <input type="tel" name="conPhone" id="conPhone" placeholder="Phone number" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form_group">
                                                 <select name="conService" id="conService" class="tj-nice-select">
                                                     <option value="" selected disabled>Choose Service</option>
-                                                    <option value="braning">Branding</option>
+                                                    <option value="branding">Branding</option>
                                                     <option value="web">Social Media Design</option>
                                                     <option value="app">Logo Designs</option>
                                                     <option value="uxui">UI/UX Design</option>
@@ -1216,8 +1212,7 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form_group">
-                                                <textarea name="conMessage" id="conMessage"
-                                                    placeholder="Message"></textarea>
+                                                <textarea name="conMessage" id="conMessage" placeholder="Message"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -1227,6 +1222,8 @@
                                         </div>
                                     </div>
                                 </form>
+                            
+                                <p id="response"></p>
                             </div>
                         </div>
                     </div>
@@ -1378,6 +1375,22 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            $('#contact-form').submit(function(event) {
+                event.preventDefault();
+
+                $.ajax({
+                    url: 'submit_form.php',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        $('#response').text(response);
+                    }
+                });
+            });
+        });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var modals = document.querySelectorAll('.popup_content_area');
