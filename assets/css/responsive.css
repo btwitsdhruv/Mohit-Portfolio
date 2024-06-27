@@ -965,3 +965,34 @@
 		margin-top: 60px;
 	}
 }
+
+@media only screen and (max-width: 428px) {
+	.popup_content_area .mfp-close {
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		font-size: 30px;
+		line-height: 1;
+		/* right: -150px; */
+		top: -100px;
+	}
+	.prev
+	{
+		right:10px;
+	}
+	.slider {
+		display: flex;
+		overflow: hidden;
+		width: 100%;
+
+	}
+	.slider-image {
+
+		width: 100%; /* Small size */
+		height: 100%;
+		margin: 0 auto;
+		object-fit: cover;
+		transition: width 0.5s ease, transform 0.5s ease;
+	}
+	
+}
