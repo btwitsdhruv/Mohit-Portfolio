@@ -84,6 +84,9 @@
         .light-mode .owl-dots .owl-dot span {
             opacity: 1;
         }
+        .branding{
+            left:0%;
+        }
     </style>
 </head>
 
@@ -392,18 +395,18 @@
 
                 <div class="row">
                     <!-- <div class="col-md-12"> -->
-                    <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
-                        <div class="button-group filter-button-group">
-                            <button data-filter="*" class="active">All</button>
-                            <button data-filter=".branding">Branding</button>
-                            <button data-filter=".social-media">SocialMedia</button>
-                            <button data-filter=".logox">Logo Designs</button>
-                            <button data-filter=".mobile-app">Digital Art</button>
-                            <button data-filter=".uxui">UI/UX</button>
-
-                            <div class="active-bg"></div>
-                        </div>
-                    </div>
+                        <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
+                            <div class="button-group filter-button-group">
+                              <button data-filter="*" class="active">All</button>
+                              <button data-filter=".branding">Branding</button>
+                              <button data-filter=".social-media">SocialMedia</button>
+                              <button data-filter=".logox">Logo Designs</button>
+                              <button data-filter=".mobile-app">Digital Art</button>
+                              <button data-filter=".uxui">UI/UX</button>
+                              <div class="active-bg"></div>
+                            </div>
+                          </div>
+                          
                     <!-- <div class="portfolio-box-container"> -->
 
 
@@ -427,7 +430,7 @@
                         <!-- <div class="portfolio-box wow">
                         <div class="portfolio-sizer"></div>
                         <div class="gutter-sizer"></div> -->
-                        <div class="portfolio-item social-media">
+                        <div class="portfolio-item social-media" style="left:0%;">
                             <div class="image-box">
                                 <img src="assets/Cover photo/Social Media.webp" alt="">
                             </div>
@@ -445,7 +448,7 @@
                         <!-- <div class="portfolio-box wow">
                         <div class="portfolio-sizer"></div>
                         <div class="gutter-sizer"></div> -->
-                        <div class="portfolio-item logox">
+                        <div class="portfolio-item logox" style="left:0;">
                             <div class="image-box">
                                 <img src="assets/Cover photo/LOGO.webp" alt="">
                             </div>
@@ -464,7 +467,7 @@
                         <!-- <div class="portfolio-box wow">
                         <div class="portfolio-sizer"></div>
                         <div class="gutter-sizer"></div> -->
-                        <div class="portfolio-item mobile-app">
+                        <div class="portfolio-item mobile-app" style="left:0;">
                             <div class="image-box">
                                 <img src="assets/Cover photo/Digital Art.webp" alt="">
                             </div>
@@ -482,7 +485,7 @@
                         <!-- <div class="portfolio-box wow">
                         <div class="portfolio-sizer"></div>
                         <div class="gutter-sizer"></div> -->
-                        <div class="portfolio-item uxui">
+                        <div class="portfolio-item uxui" style="left:0;">
                             <div class="image-box">
                                 <img src="assets/Cover photo/UI-UX.webp" alt="">
                             </div>
@@ -731,7 +734,7 @@
                             <div class="skill-item wow fadeInUp" data-wow-delay=".3s">
                                 <div class="skill-inner">
                                     <div class="icon-box">
-                                        <img src="assets/img/icons/xd.svg" alt="" loading="lazy">
+                                        <img src="assets/img/icons/photoshop.png" alt="" loading="lazy">
                                     </div>
                                     <div class="number">99%</div>
                                 </div>
@@ -740,7 +743,7 @@
                             <div class="skill-item wow fadeInUp" data-wow-delay=".4s">
                                 <div class="skill-inner">
                                     <div class="icon-box">
-                                        <img src="assets/img/icons/sketch.svg" alt="" loading="lazy">
+                                        <img src="assets/img/icons/illustrator.png" alt="" loading="lazy">
                                     </div>
                                     <div class="number">92%</div>
                                 </div>
@@ -749,7 +752,7 @@
                             <div class="skill-item wow fadeInUp" data-wow-delay=".5s">
                                 <div class="skill-inner">
                                     <div class="icon-box">
-                                        <img src="assets/img/icons/xd.svg" alt="" loading="lazy">
+                                        <img src="assets/img/icons/Procreate-Icon.png" alt="" loading="lazy">
                                     </div>
                                     <div class="number">85%</div>
                                 </div>
@@ -1480,6 +1483,39 @@
                 document.body.classList.remove('light-mode');
             }
         });
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+  const buttons = document.querySelectorAll('.portfolio-filter .button-group button');
+  const activeBg = document.querySelector('.portfolio-filter .button-group .active-bg');
+
+  function updateActiveBg() {
+    const activeButton = document.querySelector('.portfolio-filter .button-group .active');
+    if (activeButton) {
+      const buttonRect = activeButton.getBoundingClientRect();
+      const containerRect = activeButton.parentElement.getBoundingClientRect();
+      
+      activeBg.style.width = `${buttonRect.width}px`;
+      activeBg.style.height = `${buttonRect.height}px`;
+      activeBg.style.left = `${buttonRect.left - containerRect.left}px`;
+      activeBg.style.top = `${buttonRect.top - containerRect.top}px`;
+    }
+  }
+
+  buttons.forEach(button => {
+    button.addEventListener('click', function() {
+      document.querySelector('.portfolio-filter .button-group .active').classList.remove('active');
+      button.classList.add('active');
+      updateActiveBg();
+    });
+  });
+
+  window.addEventListener('resize', updateActiveBg);
+
+  updateActiveBg(); // Initial call
+});
+
 
 
     </script>

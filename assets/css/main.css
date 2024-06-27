@@ -1250,8 +1250,9 @@ body.loaded {
 	border-radius: 60px;
 	padding: 6px 8px;
 	display: inline-block;
-}
-.portfolio-filter .button-group button {
+	position: relative;
+  }
+  .portfolio-filter .button-group button {
 	background: transparent;
 	border: none;
 	color: var(--tj-white);
@@ -1262,44 +1263,22 @@ body.loaded {
 	border-radius: 50px;
 	z-index: 10;
 	position: relative;
-}
-.portfolio-filter .button-group {
-	position: relative;
-}
-.portfolio-filter .button-group .active-bg {
+  }
+  .portfolio-filter .button-group .active-bg {
 	border-radius: 50px;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
 	position: absolute;
 	z-index: 1;
 	background: var(--tj-theme-primary);
-	background: -o-linear-gradient(
-		190deg,
-		var(--tj-theme-secondary) 0%,
-		var(--tj-theme-primary) 100%
-	);
-	background: linear-gradient(
-		260deg,
-		var(--tj-theme-secondary) 0%,
-		var(--tj-theme-primary) 100%
-	);
-	-webkit-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
+	background: linear-gradient(260deg, var(--tj-theme-secondary) 0%, var(--tj-theme-primary) 100%);
 	transition: all 0.5s ease;
-}
-@media (max-width: 480px) {
-	.portfolio-filter .button-group button{
-		font-size: 5px;
-		line-height: 0.5;
+  }
+  @media (max-width: 480px) {
+	.portfolio-filter .button-group button {
+	  font-size: 10px;
+	  line-height: 1;
 	}
-	.portfolio-filter .button-group .active-bg {
-		width: 25%; /* Further adjust width for smaller mobile screens */
-        height: 51%;	
-    }
-}
-
+  }
+  
 .portfolio-box {
 	display: flex;
 	flex-direction: row;

@@ -699,7 +699,7 @@
 	}
 	.portfolio-box .portfolio-item {
 		width: 100%;
-		padding: 25px 15px 0 15px;
+		/* padding: 25px 15px 0 15px; */
 		margin-bottom: 30px;
 	}
 	.portfolio-box .content-box {
@@ -1006,15 +1006,23 @@
 		object-fit: cover;
 		transition: width 0.5s ease, transform 0.5s ease;
 	}
+	
 	.portfolio-box {
 		display: flex;
 		justify-content: center; /* Ensure horizontal centering */
-		left:0px;
+		align-items: center;
 		width: 90%;
 		margin: 0 auto; /* Center horizontally using margin */
 	}
+	.portfolio-item{
 	
+	display: flex;
+	justify-content: center; /* Ensure horizontal centering */
+	align-items: center;
+	width: 100%;
+	margin: 0 auto;
 
 	}
 	
+
 }
