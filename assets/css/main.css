@@ -3560,13 +3560,6 @@ body.absolute_header .breadcrumb_area {
         font-size: 16px;
     }
 
-    .next {
-        right: -60px;
-    }
-
-    .prev {
-        left: -60px;
-    }
 }
 
 /* Fullscreen Button */
@@ -3613,11 +3606,8 @@ body.absolute_header .breadcrumb_area {
     width: 100%; /* Fullscreen size */
     height: auto;
 }
-.close{
-	cursor: pointer;
-	padding: 15px;
-	width: 50%;
-}
+
+
 
 /* Navigation Buttons */
 .prev,
