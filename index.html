@@ -1177,7 +1177,7 @@
                             </div>
 
                             <div class="tj-contact-form">
-                                <form id="contact-form">
+                                <form id="contact-form" method="post" action="submit_form.php">
                                     <div class="row gx-3">
                                         <div class="col-sm-6">
                                             <div class="form_group">
@@ -1375,22 +1375,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            $('#contact-form').submit(function(event) {
-                event.preventDefault();
-
-                $.ajax({
-                    url: 'submit_form.php',
-                    type: 'POST',
-                    data: $(this).serialize(),
-                    success: function(response) {
-                        $('#response').text(response);
-                    }
-                });
-            });
-        });
-    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var modals = document.querySelectorAll('.popup_content_area');
