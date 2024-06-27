@@ -983,12 +983,12 @@
 	.slider {
 		display: flex;
 		overflow: hidden;
-		width: 100%;
+		width: 90%;
 
 	}
 	.slider-image {
 
-		width: 100%; /* Small size */
+		width: 90%; /* Small size */
 		height: 100%;
 		margin: 0 auto;
 		object-fit: cover;
