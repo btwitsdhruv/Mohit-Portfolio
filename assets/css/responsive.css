@@ -1006,5 +1006,12 @@
 		object-fit: cover;
 		transition: width 0.5s ease, transform 0.5s ease;
 	}
+	.portfolio-box{
+		display: flex;
+		padding-left: 50px;
+		padding-right: 50px;
+		width: 80%;
+
+	}
 	
 }
