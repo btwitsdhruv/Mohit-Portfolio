@@ -976,10 +976,7 @@
 		/* right: -150px; */
 		top: -100px;
 	}
-	.prev
-	{
-		right:10px;
-	}
+	
 	.slider {
 		display: flex;
 		overflow: hidden;
