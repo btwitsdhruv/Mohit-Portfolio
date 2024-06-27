@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/light-mode.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
@@ -54,90 +54,36 @@
             /* Firefox */
         }
 
-        :root {
-            --tj-body-light: #dddddd;
-            --tj-white-light: #ffffff;
-            --tj-off-white-light: #f6f3fc;
-            --tj-black-light: #000000;
-            --tj-black-2-light: #050709;
-            --tj-heading-primary-light: #102039;
-            --tj-heading-secondary-light: #ea1826;
-            --tj-theme-primary-light: #8750f7;
-            --tj-theme-secondary-light: #2a1454;
-            --tj-theme-accent-1-light: #0f0715;
-            --tj-theme-accent-2-light: #140c1c;
-            --tj-grey-1-light: #747779;
-            --tj-grey-2-light: #d9d9d9;
-            --tj-grey-3-light: #dddddd;
-            --tj-grey-4-light: #22272c;
-
-            --tj-body-dark: #22272c;
-            --tj-white-dark: #141414;
-            --tj-off-white-dark: #1a1a1a;
-            --tj-black-dark: #e1e1e1;
-            --tj-black-2-dark: #d4d4d4;
-            --tj-heading-primary-dark: #f1f1f1;
-            --tj-heading-secondary-dark: #f7f7f7;
-            --tj-theme-primary-dark: #7851a9;
-            --tj-theme-secondary-dark: #1c1c54;
-            --tj-theme-accent-1-dark: #262626;
-            --tj-theme-accent-2-dark: #2c2c2c;
-            --tj-grey-1-dark: #a1a1a1;
-            --tj-grey-2-dark: #5a5a5a;
-            --tj-grey-3-dark: #444444;
-            --tj-grey-4-dark: #1b1b1b;
+        body.light-mode {
+            background: var(--tj-white);
+            color: var(--tj-theme-accent-2);
         }
 
-        /* Default to light mode */
-        :root {
-            --tj-body: var(--tj-body-light);
-            --tj-white: var(--tj-white-light);
-            --tj-off-white: var(--tj-off-white-light);
-            --tj-black: var(--tj-black-light);
-            --tj-black-2: var(--tj-black-2-light);
-            --tj-heading-primary: var(--tj-heading-primary-light);
-            --tj-heading-secondary: var(--tj-heading-secondary-light);
-            --tj-theme-primary: var(--tj-theme-primary-light);
-            --tj-theme-secondary: var(--tj-theme-secondary-light);
-            --tj-theme-accent-1: var(--tj-theme-accent-1-light);
-            --tj-theme-accent-2: var(--tj-theme-accent-2-light);
-            --tj-grey-1: var(--tj-grey-1-light);
-            --tj-grey-2: var(--tj-grey-2-light);
-            --tj-grey-3: var(--tj-grey-3-light);
-            --tj-grey-4: var(--tj-grey-4-light);
+        .light-mode h1,
+        .light-mode h2,
+        .light-mode h3,
+        .light-mode h4,
+        .light-mode h5,
+        .light-mode h6 {
+            color: var(--tj-theme-secondary);
         }
 
-        body {
-            font-family: var(--tj-ff-body);
-            font-size: var(--tj-fz-body);
-            font-weight: var(--tj-fw-regular);
-            color: var(--tj-body);
-
+        .light-mode .btn:hover {
+            color: var(--tj-white);
         }
 
-        /* Dark mode styles */
-        body.dark-mode {
-            --tj-body: var(--tj-body-dark);
-            --tj-white: var(--tj-white-dark);
-            --tj-off-white: var(--tj-off-white-dark);
-            --tj-black: var(--tj-black-dark);
-            --tj-black-2: var(--tj-black-2-dark);
-            --tj-heading-primary: var(--tj-heading-primary-dark);
-            --tj-heading-secondary: var(--tj-heading-secondary-dark);
-            --tj-theme-primary: var(--tj-theme-primary-dark);
-            --tj-theme-secondary: var(--tj-theme-secondary-dark);
-            --tj-theme-accent-1: var(--tj-theme-accent-1-dark);
-            --tj-theme-accent-2: var(--tj-theme-accent-2-dark);
-            --tj-grey-1: var(--tj-grey-1-dark);
-            --tj-grey-2: var(--tj-grey-2-dark);
-            --tj-grey-3: var(--tj-grey-3-dark);
-            --tj-grey-4: var(--tj-grey-4-dark);
+        .light-mode .section-header .section-title {
+            background: var(--tj-theme-primary);
+            background: -webkit-gradient(linear, left top, right top, from(var(--tj-theme-primary)), to(var(--tj-theme-secondary)));
+            background: -o-linear-gradient(left, var(--tj-theme-primary) 0%, var(--tj-theme-secondary) 100%);
+            background: linear-gradient(to right, var(--tj-theme-primary) 0%, var(--tj-theme-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        /* .hero-section{
-            background:white ;
-            color: #2a1454;
-        } */
+        .light-mode .owl-dots .owl-dot span {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -207,6 +153,8 @@
                             <input class="yep" id="check-apple" type="checkbox">
                             <label for="check-apple"></label>
                         </div>
+
+                        
                         <!-- <a href="#" class="btn tj-btn-primary">Hire me!</a> -->
                     </div>
 
@@ -238,7 +186,7 @@
                     <div class="header-info-list d-none d-md-inline-block">
                         <ul class="ul-reset">
                             <li><a href="mailto:mohitdoad1234@gmail.com ">mohitdoad1234@gmail.com </a></li>
-                        
+
                         </ul>
                     </div>
 
@@ -254,10 +202,10 @@
                         </nav>
                     </div>
                     <div class="header-button">
-                        <div class="checkbox-apple">
+                        <!-- <div class="checkbox-apple">
                             <input class="yep" id="check-apple" type="checkbox">
                             <label for="check-apple"></label>
-                        </div>
+                        </div> -->
                         <!-- <a href="#" class="btn tj-btn-primary">Hire me!</a> -->
                     </div>
 
@@ -458,7 +406,7 @@
                     </div>
                     <!-- <div class="portfolio-box-container"> -->
 
-                    
+
                     <div class="portfolio-box wow">
                         <div class="portfolio-sizer"></div>
                         <div class="gutter-sizer"></div>
@@ -475,8 +423,8 @@
                                     class="portfolio-link service-link modal-popup"></button>
                             </div>
                         </div>
-                    <!-- </div> -->
-                    <!-- <div class="portfolio-box wow">
+                        <!-- </div> -->
+                        <!-- <div class="portfolio-box wow">
                         <div class="portfolio-sizer"></div>
                         <div class="gutter-sizer"></div> -->
                         <div class="portfolio-item social-media">
@@ -490,61 +438,61 @@
                                 <button data-mfp-src="#portfolio-wrapper2" class="portfolio-link modal-popup"></button>
                             </div>
                         </div>
-                    <!-- </div> -->
-                    <!-- finish socia media images -->
-                    
-                    <!-- logox -->
-                    <!-- <div class="portfolio-box wow">
-                        <div class="portfolio-sizer"></div>
-                        <div class="gutter-sizer"></div> -->
-                    <div class="portfolio-item logox">
-                        <div class="image-box">
-                            <img src="assets/Cover photo/LOGO.webp" alt="">
-                        </div>
-                        <div class="content-box">
-                            <h3 class="portfolio-title">Logo</h3>
-                            <!-- <p>Project was about precision and information.</p> -->
-                            <i class="flaticon-up-right-arrow"></i>
-                            <button data-mfp-src="#portfolio-wrapper3" class="portfolio-link modal-popup"></button>
-                        </div>
-                    </div>
-                    <!-- </div> -->
+                        <!-- </div> -->
+                        <!-- finish socia media images -->
 
-                    <!--finish logox  -->
-                    
-                    <!-- digitalart -->
-                    <!-- <div class="portfolio-box wow">
+                        <!-- logox -->
+                        <!-- <div class="portfolio-box wow">
                         <div class="portfolio-sizer"></div>
                         <div class="gutter-sizer"></div> -->
-                    <div class="portfolio-item mobile-app">
-                        <div class="image-box">
-                            <img src="assets/Cover photo/Digital Art.webp" alt="">
+                        <div class="portfolio-item logox">
+                            <div class="image-box">
+                                <img src="assets/Cover photo/LOGO.webp" alt="">
+                            </div>
+                            <div class="content-box">
+                                <h3 class="portfolio-title">Logo</h3>
+                                <!-- <p>Project was about precision and information.</p> -->
+                                <i class="flaticon-up-right-arrow"></i>
+                                <button data-mfp-src="#portfolio-wrapper3" class="portfolio-link modal-popup"></button>
+                            </div>
                         </div>
-                        <div class="content-box">
-                            <h3 class="portfolio-title">Digital-Art</h3>
-                            <!-- <p>Project was about precision and information.</p> -->
-                            <i class="flaticon-up-right-arrow"></i>
-                            <button data-mfp-src="#portfolio-wrapper4" class="portfolio-link modal-popup"></button>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                    <!-- finish digital art -->
-                    <br>
-                    <!-- uiux -->
-                    <!-- <div class="portfolio-box wow">
+                        <!-- </div> -->
+
+                        <!--finish logox  -->
+
+                        <!-- digitalart -->
+                        <!-- <div class="portfolio-box wow">
                         <div class="portfolio-sizer"></div>
                         <div class="gutter-sizer"></div> -->
-                    <div class="portfolio-item uxui">
-                        <div class="image-box">
-                            <img src="assets/Cover photo/UI-UX.webp" alt="">
+                        <div class="portfolio-item mobile-app">
+                            <div class="image-box">
+                                <img src="assets/Cover photo/Digital Art.webp" alt="">
+                            </div>
+                            <div class="content-box">
+                                <h3 class="portfolio-title">Digital-Art</h3>
+                                <!-- <p>Project was about precision and information.</p> -->
+                                <i class="flaticon-up-right-arrow"></i>
+                                <button data-mfp-src="#portfolio-wrapper4" class="portfolio-link modal-popup"></button>
+                            </div>
                         </div>
-                        <div class="content-box">
-                            <h3 class="portfolio-title">Ui-Ux</h3>
-                            <!-- <p>Project was about precision and information.</p> -->
-                            <i class="flaticon-up-right-arrow"></i>
-                            <button data-mfp-src="#portfolio-wrapper5" class="portfolio-link modal-popup"></button>
+                        <!-- </div> -->
+                        <!-- finish digital art -->
+                        <br>
+                        <!-- uiux -->
+                        <!-- <div class="portfolio-box wow">
+                        <div class="portfolio-sizer"></div>
+                        <div class="gutter-sizer"></div> -->
+                        <div class="portfolio-item uxui">
+                            <div class="image-box">
+                                <img src="assets/Cover photo/UI-UX.webp" alt="">
+                            </div>
+                            <div class="content-box">
+                                <h3 class="portfolio-title">Ui-Ux</h3>
+                                <!-- <p>Project was about precision and information.</p> -->
+                                <i class="flaticon-up-right-arrow"></i>
+                                <button data-mfp-src="#portfolio-wrapper5" class="portfolio-link modal-popup"></button>
+                            </div>
                         </div>
-                    </div>
                     </div>
                     <!-- finish uiux -->
                     <!-- </div> -->
@@ -1525,18 +1473,14 @@
             });
         });
 
-
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const checkbox = document.getElementById('check-apple');
-
-            checkbox.addEventListener('change', () => {
-                if (checkbox.checked) {
-                    document.body.classList.add('dark-mode');
-                } else {
-                    document.body.classList.remove('dark-mode');
-                }
-            });
+        document.getElementById('check-apple').addEventListener('change', function () {
+            if (this.checked) {
+                document.body.classList.add('light-mode');
+            } else {
+                document.body.classList.remove('light-mode');
+            }
         });
+
 
     </script>
 </body>

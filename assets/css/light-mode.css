@@ -3,6 +3,7 @@
 *  START: Theme Default CSS
 * ===============================
 */
+
 body.light-mode {
 	background: var(--tj-white);
 	color: var(--tj-theme-accent-2);

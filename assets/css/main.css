@@ -1,11 +1,5 @@
 /*-----------------------------------------------------------------------------------
 
-Theme Name: Gerold - Personal Portfolio HTML5 Template
-Theme URI: https://themejunction.net/html/gerold/demo/
-Author: Theme-Junction
-Author URI: https://themeforest.net/user/theme-junction
-Description: Gerold - Personal Portfolio HTML5 Template
-
 -----------------------------------------------------------------------------------
 /************ TABLE OF CONTENTS ***************
 
@@ -1457,16 +1451,16 @@ body.loaded {
 }
 .popup-mfp .mfp-container {
 	position: fixed;
-	padding: 75px 0;
-	overflow-y: scroll;
+	/* padding: 75px 0; */
+	/* overflow-y: scroll;
 
 	scrollbar-width: thin;
-	scrollbar-color: var(--tj-theme-primary) var(--tj-theme-secondary);
+	scrollbar-color: var(--tj-theme-primary) var(--tj-theme-secondary); */
 }
 .popup-mfp .mfp-container::-webkit-scrollbar {
-	height: 4px;
+	/* height: 4px;
 	width: 4px;
-	background: var(--tj-theme-secondary);
+	background: var(--tj-theme-secondary); */
 }
 
 .popup-mfp .mfp-container::-webkit-scrollbar-thumb {
@@ -1542,7 +1536,9 @@ body.loaded {
 	-webkit-transition: 0.3s;
 	-o-transition: 0.3s;
 	transition: 0.3s;
+	position: fixed;
 }
+
 .popup_content_area .mfp-close:hover {
 	-webkit-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);
