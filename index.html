@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
         .pdf-modal {
-            max-width: 70%;
+            max-width: 50%;
             margin: auto;
         }
 
@@ -88,6 +88,11 @@
             left:0%;
         }
     </style>
+     <script type="text/javascript">
+        (function(){
+            emailjs.init("service_55o6cxk"); // Replace with your EmailJS user ID
+        })();
+    </script>
 </head>
 
 <body>
@@ -1177,7 +1182,7 @@
                             </div>
 
                             <div class="tj-contact-form">
-                                <form id="contact-form" method="post" action="submit_form.php">
+                                <form id="contact-form">
                                     <div class="row gx-3">
                                         <div class="col-sm-6">
                                             <div class="form_group">
@@ -1224,6 +1229,8 @@
                                 </form>
                             
                                 <p id="response"></p>
+                            
+                            
                             </div>
                         </div>
                     </div>
@@ -1515,6 +1522,20 @@
 
 
 
+
+
+    </script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm('service_55o6cxk', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    document.getElementById('response').textContent = 'Message sent successfully!';
+                }, function(error) {
+                    document.getElementById('response').textContent = 'Failed to send message: ' + JSON.stringify(error);
+                });
+        });
     </script>
 </body>
 
