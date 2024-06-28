@@ -134,7 +134,7 @@
 
                     <div class="logo-box">
                         <a href="index.html">
-                            <img src="assets/img/logo/Logo 1.png" alt="" loading="lazy">
+                            <img class="logo" src="assets/img/logo/Logo 1.png" alt="" loading="lazy">
                         </a>
                     </div>
 
@@ -187,7 +187,7 @@
 
                     <div class="logo-box">
                         <a href="index.html">
-                            <img src="assets/img/logo/Logo 1.png" alt="" loading="lazy">
+                            <img class="logo" src="assets/img/logo/Logo 1.png" alt="" loading="lazy">
                         </a>
                     </div>
 
@@ -1481,13 +1481,19 @@
         });
 
         document.getElementById('check-apple').addEventListener('change', function () {
-            if (this.checked) {
-                document.body.classList.add('light-mode');
-            } else {
-                document.body.classList.remove('light-mode');
-            }
-        });
-
+        var logos = document.querySelectorAll('.logo');
+        if (this.checked) {
+            document.body.classList.add('light-mode');
+            logos.forEach(function(logo) {
+                logo.src = 'assets/img/logo/favicon.png'; // Light mode logo
+            });
+        } else {
+            document.body.classList.remove('light-mode');
+            logos.forEach(function(logo) {
+                logo.src = 'assets/img/logo/Logo 1.png'; // Original logo
+            });
+        }
+    });
 
 
         document.addEventListener('DOMContentLoaded', function() {
