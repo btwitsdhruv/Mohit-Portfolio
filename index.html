@@ -30,14 +30,17 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
         .pdf-modal {
-            max-width: 50%;
-            margin: auto;
+
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
         }
 
         .pdf-modal iframe {
-            width: 100%;
+            width: 50%;
             height: 88vh;
-            /* Increase the height of the iframe */
+            /* Default height for desktop screens */
             border: none;
             /* Remove the default border */
         }
@@ -53,6 +56,21 @@
             scrollbar-width: none;
             /* Firefox */
         }
+
+        /* Media query for screens 428px or less */
+        @media (max-width: 428px) {
+            .pdf-modal {
+                height: 100%;
+
+            }
+
+            .pdf-modal iframe {
+                width: 70%;
+                height: 20vh;
+                /* Height for smaller screens */
+            }
+        }
+
 
         body.light-mode {
             background: var(--tj-white);
@@ -84,12 +102,13 @@
         .light-mode .owl-dots .owl-dot span {
             opacity: 1;
         }
-        .branding{
-            left:0%;
+
+        .branding {
+            left: 0%;
         }
     </style>
-     <script type="text/javascript">
-        (function(){
+    <script type="text/javascript">
+        (function () {
             emailjs.init("service_55o6cxk"); // Replace with your EmailJS user ID
         })();
     </script>
@@ -162,7 +181,7 @@
                             <label for="check-apple"></label>
                         </div>
 
-                        
+
                         <!-- <a href="#" class="btn tj-btn-primary">Hire me!</a> -->
                     </div>
 
@@ -400,18 +419,18 @@
 
                 <div class="row">
                     <!-- <div class="col-md-12"> -->
-                        <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
-                            <div class="button-group filter-button-group">
-                              <button data-filter="*" class="active">All</button>
-                              <button data-filter=".branding">Branding</button>
-                              <button data-filter=".social-media">SocialMedia</button>
-                              <button data-filter=".logox">Logo Designs</button>
-                              <button data-filter=".mobile-app">Digital Art</button>
-                              <button data-filter=".uxui">UI/UX</button>
-                              <div class="active-bg"></div>
-                            </div>
-                          </div>
-                          
+                    <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
+                        <div class="button-group filter-button-group">
+                            <button data-filter="*" class="active">All</button>
+                            <button data-filter=".branding">Branding</button>
+                            <button data-filter=".social-media">SocialMedia</button>
+                            <button data-filter=".logox">Logo Designs</button>
+                            <button data-filter=".mobile-app">Digital Art</button>
+                            <button data-filter=".uxui">UI/UX</button>
+                            <div class="active-bg"></div>
+                        </div>
+                    </div>
+
                     <!-- <div class="portfolio-box-container"> -->
 
 
@@ -1186,22 +1205,26 @@
                                     <div class="row gx-3">
                                         <div class="col-sm-6">
                                             <div class="form_group">
-                                                <input type="text" name="conName" id="conName" placeholder="First name" autocomplete="off">
+                                                <input type="text" name="conName" id="conName" placeholder="First name"
+                                                    autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form_group">
-                                                <input type="text" name="conLName" id="conLName" placeholder="Last name" autocomplete="off">
+                                                <input type="text" name="conLName" id="conLName" placeholder="Last name"
+                                                    autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form_group">
-                                                <input type="email" name="conEmail" id="conEmail" placeholder="Email address" autocomplete="off">
+                                                <input type="email" name="conEmail" id="conEmail"
+                                                    placeholder="Email address" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form_group">
-                                                <input type="tel" name="conPhone" id="conPhone" placeholder="Phone number" autocomplete="off">
+                                                <input type="tel" name="conPhone" id="conPhone"
+                                                    placeholder="Phone number" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -1217,7 +1240,8 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form_group">
-                                                <textarea name="conMessage" id="conMessage" placeholder="Message"></textarea>
+                                                <textarea name="conMessage" id="conMessage"
+                                                    placeholder="Message"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -1227,10 +1251,10 @@
                                         </div>
                                     </div>
                                 </form>
-                            
+
                                 <p id="response"></p>
-                            
-                            
+
+
                             </div>
                         </div>
                     </div>
@@ -1480,51 +1504,53 @@
             });
         });
 
+
+
         document.getElementById('check-apple').addEventListener('change', function () {
-        var logos = document.querySelectorAll('.logo');
-        if (this.checked) {
-            document.body.classList.add('light-mode');
-            logos.forEach(function(logo) {
-                logo.src = 'assets/img/logo/favicon.png'; // Light mode logo
+            var logos = document.querySelectorAll('.logo');
+            if (this.checked) {
+                document.body.classList.add('light-mode');
+                logos.forEach(function (logo) {
+                    logo.src = 'assets/img/logo/favicon.png'; // Light mode logo
+                });
+            } else {
+                document.body.classList.remove('light-mode');
+                logos.forEach(function (logo) {
+                    logo.src = 'assets/img/logo/Logo 1.png'; // Original logo
+                });
+            }
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.portfolio-filter .button-group button');
+            const activeBg = document.querySelector('.portfolio-filter .button-group .active-bg');
+
+            function updateActiveBg() {
+                const activeButton = document.querySelector('.portfolio-filter .button-group .active');
+                if (activeButton) {
+                    const buttonRect = activeButton.getBoundingClientRect();
+                    const containerRect = activeButton.parentElement.getBoundingClientRect();
+
+                    activeBg.style.width = `${buttonRect.width}px`;
+                    activeBg.style.height = `${buttonRect.height}px`;
+                    activeBg.style.left = `${buttonRect.left - containerRect.left}px`;
+                    activeBg.style.top = `${buttonRect.top - containerRect.top}px`;
+                }
+            }
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    document.querySelector('.portfolio-filter .button-group .active').classList.remove('active');
+                    button.classList.add('active');
+                    updateActiveBg();
+                });
             });
-        } else {
-            document.body.classList.remove('light-mode');
-            logos.forEach(function(logo) {
-                logo.src = 'assets/img/logo/Logo 1.png'; // Original logo
-            });
-        }
-    });
 
+            window.addEventListener('resize', updateActiveBg);
 
-        document.addEventListener('DOMContentLoaded', function() {
-  const buttons = document.querySelectorAll('.portfolio-filter .button-group button');
-  const activeBg = document.querySelector('.portfolio-filter .button-group .active-bg');
-
-  function updateActiveBg() {
-    const activeButton = document.querySelector('.portfolio-filter .button-group .active');
-    if (activeButton) {
-      const buttonRect = activeButton.getBoundingClientRect();
-      const containerRect = activeButton.parentElement.getBoundingClientRect();
-      
-      activeBg.style.width = `${buttonRect.width}px`;
-      activeBg.style.height = `${buttonRect.height}px`;
-      activeBg.style.left = `${buttonRect.left - containerRect.left}px`;
-      activeBg.style.top = `${buttonRect.top - containerRect.top}px`;
-    }
-  }
-
-  buttons.forEach(button => {
-    button.addEventListener('click', function() {
-      document.querySelector('.portfolio-filter .button-group .active').classList.remove('active');
-      button.classList.add('active');
-      updateActiveBg();
-    });
-  });
-
-  window.addEventListener('resize', updateActiveBg);
-
-  updateActiveBg(); // Initial call
-});
+            updateActiveBg(); // Initial call
+        });
 
 
 
@@ -1532,13 +1558,13 @@
 
     </script>
     <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
             event.preventDefault();
 
             emailjs.sendForm('service_55o6cxk', 'YOUR_TEMPLATE_ID', this)
-                .then(function() {
+                .then(function () {
                     document.getElementById('response').textContent = 'Message sent successfully!';
-                }, function(error) {
+                }, function (error) {
                     document.getElementById('response').textContent = 'Failed to send message: ' + JSON.stringify(error);
                 });
         });

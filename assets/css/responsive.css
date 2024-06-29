@@ -1024,18 +1024,6 @@
 	margin: 0 auto;
 
 	}
-	.pdf-modal {
-		max-width: 50%;
-		margin: auto;
-	}
 
-	.pdf-modal iframe {
-		width: 50%;
-		height: 88vh;
-		/* Increase the height of the iframe */
-		border: none;
-		/* Remove the default border */
-	}
-	
 
 }
